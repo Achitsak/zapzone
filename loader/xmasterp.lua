@@ -11,7 +11,6 @@ local target = game.CreatorId
 local script = list[target]
 
 if script then
-  print('found scriptName!')
   local url = string.format("https://raw.githubusercontent.com/Achitsak/zapzone/main/loader/scripts/%s.lua", script)
   loadstring(game:HttpGet(url))()
 else
