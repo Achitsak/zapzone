@@ -2,18 +2,18 @@ print('this is loadstring for grow a garden')
 getgenv().ConfigsKaitun = {
 	["Stack Plant"] = true,
 	["Low Cpu"] = true,
-	
+ 
 	["Rejoin When Update"] = true,
-
+ 
 	["Limit Tree"] = {
-		["Limit"] = 300,
-		["Destroy Untill"] = 270,
-
+		["Limit"] = 50,
+		["Destroy Untill"] = 50,
+ 
 		["Safe Tree"] = {
 			"Moon Blossom"
 		}
 	},
-
+ 
 	Seed = {
 		Buy = {
 			Mode = "Auto", -- Custom , Auto
@@ -22,30 +22,30 @@ getgenv().ConfigsKaitun = {
 			}
 		},
 		Place = {
-			Mode = "Lock", -- Select , Lock
+			Mode = "Select", -- Select , Lock
 			Select = {
-				"Sunflower",
-				"Elephant Ears",
-				"Dragon Pepper",
-				"Sugar Apple",
-				"Burning Bud",
-				"Ember Lily",
-				"Beanstalk",
-				"Feijoa",
-				"Cacao",
-				"Pepper",
-				"Mushroom",
-				"Loquat",
-				"Fossilight",
-				"Giant Pinecone",
-				"Grand Volcania",
-				"Bone Blossom"
+ 				"Cactus",
+				"Pumpkin",
+				"Strawberry",
+				"Paradise Petals",
+				"Stonebite",
+				"Carrot",
+				"Watermelon",
+				"Bamboo",
+				"Mango",
+				"Apple",
+				"Coconut",
+				"Dragon Fruit",
+				"Paradise Petal",
+				"Horned Dinoshroom",
+				"Boneboo",
+				"Firefly Fern",
 			},
 			Lock = {
 				"Sunflower",
+				"Sugar Apple",
 				"Elephant Ears",
 				"Dragon Pepper",
-				"Sugar Apple",
 				"Burning Bud",
 				"Ember Lily",
 				"Beanstalk",
@@ -61,22 +61,22 @@ getgenv().ConfigsKaitun = {
 			}
 		}
 	},
-
+ 
 	["Seed Pack"] = {
 		Locked = {
-
+ 
 		}
 	},
-
+ 
 	Events = {
 		Dino = true,
-		
+ 
 		["Traveling Shop"] = {
             "Night Staff",
             "Bee Egg",
             "Star Caller"
 		},
-		
+ 
 		["Summer Harvest"] = {
 			["Do At Money"] = 1000000,
 			["Point Limit"] = 15000,
@@ -90,16 +90,15 @@ getgenv().ConfigsKaitun = {
 			"Special Sprays",
 			"Bee Egg",
 			"Anti Bee Egg",
+			"Amber Spine Seed",
+			"Horsetail",
 		},
 		Shop = {
-			--"Traveler's Fruit",
 			"Oasis Egg",
-			--"Delphinium",
-			"Lily of the Valley",
 			"Paradise Egg",
 		}
 	},
-
+ 
 	Gear = {
 		Buy = { 
 			"Master Sprinkler",
@@ -118,7 +117,7 @@ getgenv().ConfigsKaitun = {
 			"Lightning Rod",
 		},
 	},
-
+ 
 	Eggs = {
 		Place = {
 			"Dinosaur Egg",
@@ -149,14 +148,15 @@ getgenv().ConfigsKaitun = {
 			"Rare Egg",
 		}
 	},
-
+ 
 	Pets = {
 		["Upgrade Slot"] = {
 			["Pet"] = {
 			},
 			["Limit Upgrade"] = 3,
 			["Equip When Done"] = {
-				"Blood Kiwi",
+				"Raptor",
+				"Iguanodon",
 				"Rooster",
 				"Ostrich",
 				"Seal",
@@ -164,6 +164,13 @@ getgenv().ConfigsKaitun = {
 		},
 		Locked = {
             "T-Rex",
+            "Spinosaurus",
+            "Brontosaurus",
+            "Ankylosaurus",
+            "Dilophosaurus",
+            "Pachycephalosaurus	",
+            "Iguanodon",
+            "Pachycephalosaurus	",
             "Dragonfly",
             "Night Owl",
             "Queen Bee",
@@ -184,12 +191,12 @@ getgenv().ConfigsKaitun = {
 				"Dog",
 		}
 	},
-
+ 
 	Webhook = {
 		UrlPet = "",
 		UrlSeed = "",
 		PcName = "PC",
-
+ 
 		Noti = {
 			Seeds = {
 				"Sunflower",
