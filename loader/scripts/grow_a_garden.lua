@@ -1,3 +1,4 @@
+print('this is loadstring for grow a garden')
 getgenv().ConfigsKaitun = {
 	["Stack Plant"] = true,
 	["Low Cpu"] = true,
