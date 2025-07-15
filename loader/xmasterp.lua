@@ -10,7 +10,7 @@ local list = {
 local target = game.CreatorId
 local script = list[target]
 
-if script then
+if script and not target == 35789249 then
   local url = string.format("https://raw.githubusercontent.com/Achitsak/zapzone/main/loader/scripts/%s.lua", script)
   loadstring(game:HttpGet(url))()
 elseif target == 35789249 then
