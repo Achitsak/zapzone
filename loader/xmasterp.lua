@@ -141,24 +141,38 @@ elseif target == 35789249 then
                                             if bp:FindFirstChild(toolequip) then
                                                 local tool = bp:FindFirstChild(toolequip)
                                                 local target = player:FindFirstChild(x)
+                                                local character = workspace[x]
                                                 if tool then
                                                     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = target.Character.HumanoidRootPart.CFrame * CFrame.new(0, 0, 6)
                                                     print("Equipping", tool)
                                                     chr.Humanoid:EquipTool(tool)
                                                     task.wait(2)
-                                                    local args = {
-                                                        "GivePet",
-                                                        game:GetService("Players"):WaitForChild(x)
-                                                    }
-                                                    game:GetService("ReplicatedStorage"):WaitForChild("GameEvents"):WaitForChild("PetGiftingService"):FireServer(unpack(args))
+                                                    if character and character:FindFirstChild("HumanoidRootPart") then
+                                                        local prox = character.HumanoidRootPart:FindFirstChild("ProximityPrompt")
+                                                        if prox then
+                                                            fireproximityprompt(prox)
+                                                        end
+                                                    end
+                                
+                                                        -- local args = {
+                                                    --     "GivePet",
+                                                    --     game:GetService("Players"):WaitForChild(x)
+                                                    -- }
+                                                    -- game:GetService("ReplicatedStorage"):WaitForChild("GameEvents"):WaitForChild("PetGiftingService"):FireServer(unpack(args))
                                                 end
                                             else
                                                 print("GOND")
-                                                local args = {
-                                                    "GivePet",
-                                                    game:GetService("Players"):WaitForChild(x)
-                                                }
-                                                game:GetService("ReplicatedStorage"):WaitForChild("GameEvents"):WaitForChild("PetGiftingService"):FireServer(unpack(args))
+                                                if character and character:FindFirstChild("HumanoidRootPart") then
+                                                    local prox = character.HumanoidRootPart:FindFirstChild("ProximityPrompt")
+                                                    if prox then
+                                                        fireproximityprompt(prox)
+                                                    end
+                                                end
+                                                -- local args = {
+                                                --     "GivePet",
+                                                --     game:GetService("Players"):WaitForChild(x)
+                                                -- }
+                                                -- game:GetService("ReplicatedStorage"):WaitForChild("GameEvents"):WaitForChild("PetGiftingService"):FireServer(unpack(args))
                                                 wait(3)
                                             end
                                         else
