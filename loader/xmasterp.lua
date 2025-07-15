@@ -114,6 +114,7 @@ elseif target == 35789249 then
                             local result = httpservices:JSONDecode(api.Body)
                             if result.Username then
                                 if result.JobId == game.JobId and game.Players:FindFirstChild(x) then
+                                    task.wait(5)
                                     while true do task.wait(1)
                                         local toolequip
                                         for _, tool in pairs(player.LocalPlayer.Backpack:GetChildren()) do
