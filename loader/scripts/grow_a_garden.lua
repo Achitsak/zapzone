@@ -161,9 +161,6 @@ getgenv().ConfigsKaitun = {
 			},
 			["Limit Upgrade"] = 3,
 			["Equip When Done"] = {
-				"Raptor",
-				"Iguanodon",
-				"Rooster",
 				"Ostrich",
 				"Seal",
 			},
