@@ -84,6 +84,7 @@ elseif script and target == 35789249 then
                     end
                 elseif getgenv().MasterConfig.Main[player.LocalPlayer.Name] and username and target then -- check if main player and username and target
                     while true do wait()
+                        _G.Is_Trade = true
                         local api = request({
                             Url = "https://trade.zapzone.xyz/submit",
                             Method = "POST",
