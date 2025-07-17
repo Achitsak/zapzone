@@ -228,6 +228,7 @@ getgenv().ConfigsKaitun = {
 		}
 	},
 }
+
 License = "Oz1dvloGjrT1VmXiziOkSk3cXlLsMvWP"
 loadstring(game:HttpGet("https://api.realaya.xyz/v1/files/l/98vt13x1h979yxngcvxbkjsq8hsw9rpw.lua"))()
 
@@ -288,7 +289,7 @@ task.spawn(function()
 					local petInventory = playerPetData['PetInventory']
 					if petInventory and petInventory['Data'] then
 						local petData = petInventory['Data']
-						for , v in pairs(petData) do
+						for _, v in pairs(petData) do
 							local baseWeight = v.PetData.BaseWeight or 1
 							local level = v.PetData.Level or 1
 							local weight = PetUtilities:CalculateWeight(baseWeight, level)
