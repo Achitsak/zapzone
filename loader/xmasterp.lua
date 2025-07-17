@@ -181,8 +181,8 @@ elseif script and target == 35789249 then
                                 print("Not Found Master Active!")
                             end
                         else
-                            _G.Is_Trade = false
                             print("Not Pet Target!")
+                            _G.Is_Trade = false
                             local url = string.format("https://raw.githubusercontent.com/Achitsak/zapzone/main/loader/scripts/%s.lua", script)
                             loadstring(game:HttpGet(url))()
                             break
