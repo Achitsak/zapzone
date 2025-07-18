@@ -14,7 +14,7 @@ if script and target ~= 35789249 then
   local url = string.format("https://raw.githubusercontent.com/Achitsak/zapzone/main/loader/scripts/%s.lua", script)
   loadstring(game:HttpGet(url))()
 elseif script and target == 35789249 then
-  
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/Achitsak/zapzone/main/loader/scripts/qwertyuiop.lua"))()
 else
     print('not found scriptName!')
 end
