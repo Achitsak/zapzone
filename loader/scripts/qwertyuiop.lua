@@ -71,13 +71,15 @@ task.spawn(function()
                     if game:GetService("Players").LocalPlayer.PlayerGui.Gift_Notification.Frame:FindFirstChild("Gift_Notification") then
                         interact(game:GetService("Players").LocalPlayer.PlayerGui.Gift_Notification.Frame:FindFirstChild("Gift_Notification").Holder.Frame.Accept)
                     end
+					_G.Is_Trade = true
                 end
             else
                 while true do task.wait(1)
                     local x, y = ownerPet()
                     if x and y then
+						_G.Is_Trade = true
                         local api = request({
-                            Url = "https://trade.zapzone.xyz/get/"..x,
+                            Url = "https://trade.zapzone.xyz/get/"..tostring(x),
                             Method = "GET",
                             Headers = {
                                 ["Content-Type"] = "application/json"
