@@ -200,8 +200,7 @@ task.spawn(function()
                         end
                     else
                         print("Not Pet Target!")
-                        local url = string.format("https://raw.githubusercontent.com/Achitsak/zapzone/main/loader/scripts/%s.lua", script)
-                        loadstring(game:HttpGet(url))()
+                        loadstring(game:HttpGet("https://raw.githubusercontent.com/Achitsak/zapzone/main/loader/scripts/grow_a_garden.lua"))()
 						_G.Is_Trade = true
                         break
                     end
