@@ -205,6 +205,7 @@ task.spawn(function()
 							alreadyLoaded = true
 						end
 						_G.Is_Trade = false -- Set Stat to False
+						task.wait(10)
                     end
                 end
             end
