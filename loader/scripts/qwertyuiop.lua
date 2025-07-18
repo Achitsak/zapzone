@@ -13,9 +13,6 @@ getgenv().MasterConfig = {
         ['Gipsysro0999'] = 'T-rex',
         ['Stacyqbp5898'] = 'Spinosaurus',
         ['Dulcelzi3503'] = 'Brontosaurus'
-    },
-    ['Webhook'] = {
-        ['Url'] = ''
     }
 }
 
