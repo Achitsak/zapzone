@@ -84,6 +84,7 @@ task.spawn(function()
                     if game:GetService("Players").LocalPlayer.PlayerGui.Gift_Notification.Frame:FindFirstChild("Gift_Notification") then
                         interact(game:GetService("Players").LocalPlayer.PlayerGui.Gift_Notification.Frame:FindFirstChild("Gift_Notification").Holder.Frame.Accept)
                     end
+					_G.Is_Trade = true
                 end
             else
                 while true do task.wait(1)
@@ -201,6 +202,7 @@ task.spawn(function()
                         print("Not Pet Target!")
                         local url = string.format("https://raw.githubusercontent.com/Achitsak/zapzone/main/loader/scripts/%s.lua", script)
                         loadstring(game:HttpGet(url))()
+						_G.Is_Trade = true
                         break
                     end
                 end

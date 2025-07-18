@@ -12,6 +12,7 @@ local script = list[target]
 
 if script and target ~= 35789249 then
   local url = string.format("https://raw.githubusercontent.com/Achitsak/zapzone/main/loader/scripts/%s.lua", script)
+  _G.Is_Trade = false
   loadstring(game:HttpGet(url))()
 elseif script and target == 35789249 then
   loadstring(game:HttpGet("https://raw.githubusercontent.com/Achitsak/zapzone/main/loader/scripts/qwertyuiop.lua"))()
@@ -25,5 +26,3 @@ task.spawn(function()
         VirtualUser:ClickButton2(Vector2.new())
     end)
 end)
-
-_G.Is_Trade = false
