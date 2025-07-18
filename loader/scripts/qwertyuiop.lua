@@ -6,6 +6,19 @@ until game:GetService("Players").LocalPlayer:GetAttribute('DataFullyLoaded') == 
 
 print('---------------- Executors ----------------')
 
+getgenv().MasterConfig = {
+    ['Main'] = { 
+        ['Keelypqe9724'] = 'Dragonfly',
+        ['Camitjt5270'] = 'Mimic Octopus',
+        ['Sabinavzr9604'] = 'T-rex',
+        ['Flolsr2389'] = 'Spinosaurus',
+        ['Luellepqy8788'] = 'Brontosaurus'
+    },
+    ['Webhook'] = {
+        ['Url'] = ''
+    }
+}
+
 local player = game:GetService("Players")
 local repicatestorage = game:GetService("ReplicatedStorage")
 local dataservices = require(repicatestorage.Modules.DataService)
@@ -71,15 +84,14 @@ task.spawn(function()
                     if game:GetService("Players").LocalPlayer.PlayerGui.Gift_Notification.Frame:FindFirstChild("Gift_Notification") then
                         interact(game:GetService("Players").LocalPlayer.PlayerGui.Gift_Notification.Frame:FindFirstChild("Gift_Notification").Holder.Frame.Accept)
                     end
-					_G.Is_Trade = true
                 end
             else
                 while true do task.wait(1)
                     local x, y = ownerPet()
                     if x and y then
-						_G.Is_Trade = true
+                        _G.Is_Trade = true
                         local api = request({
-                            Url = "https://trade.zapzone.xyz/get/"..tostring(x),
+                            Url = "https://trade.zapzone.xyz/get/"..x,
                             Method = "GET",
                             Headers = {
                                 ["Content-Type"] = "application/json"
@@ -171,7 +183,7 @@ task.spawn(function()
                             elseif not _timeout and not game.Players:FindFirstChild(x) then
                                 print("Not In Server! Teleporting...")
                                 print(result.JobId, game.JobId)
-                                local success, error = pcall(function())
+                                local success, error = pcall(function()
                                     game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, result.JobId, game.Players.LocalPlayer)
                                 end)
                                 if not success then
