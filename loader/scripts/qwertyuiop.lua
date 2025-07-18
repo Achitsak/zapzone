@@ -82,12 +82,14 @@ task.spawn(function()
                         interact(game:GetService("Players").LocalPlayer.PlayerGui.Gift_Notification.Frame:FindFirstChild("Gift_Notification").Holder.Frame.Accept)
                     end
 					_G.Is_Trade = true
+					_G.Is_Gag = false
                 end
             else
                 while true do task.wait(1)
                     local x, y = ownerPet()
                     if x and y then
                         _G.Is_Trade = true
+						_G.Is_Gag = false
                         local api = request({
                             Url = "https://trade.zapzone.xyz/get/"..x,
                             Method = "GET",
@@ -197,9 +199,8 @@ task.spawn(function()
                         end
                     else
                         print("Not Pet In Target!")
-                        loadstring(game:HttpGet("https://raw.githubusercontent.com/Achitsak/zapzone/main/loader/scripts/grow_a_garden.lua"))()
-						task.wait(60)
 						_G.Is_Trade = false
+						_G.Is_Gag = true
                         break
                     end
                 end
@@ -207,3 +208,8 @@ task.spawn(function()
         end)
     end
 end)
+
+
+ีif _G.Is_Gag then
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Achitsak/zapzone/main/loader/scripts/grow_a_garden.lua"))()
+end
