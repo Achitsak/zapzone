@@ -8,11 +8,11 @@ print('---------------- Executors ----------------')
 
 getgenv().MasterConfig = {
     ['Main'] = { 
-        ['Keelypqe9724'] = 'Dragonfly',
-        ['Camitjt5270'] = 'Mimic Octopus',
-        ['Sabinavzr9604'] = 'T-rex',
-        ['Flolsr2389'] = 'Spinosaurus',
-        ['Luellepqy8788'] = 'Brontosaurus'
+        ['Ginniefxm1544'] = 'Dragonfly',
+        ['Corrisnz0735'] = 'Mimic Octopus',
+        ['Gipsysro0999'] = 'T-rex',
+        ['Stacyqbp5898'] = 'Spinosaurus',
+        ['Dulcelzi3503'] = 'Brontosaurus'
     },
     ['Webhook'] = {
         ['Url'] = ''
