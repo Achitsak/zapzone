@@ -62,7 +62,7 @@ task.spawn(function()
                     if player.LocalPlayer.Name == i then
                         username = i 
                         target = v
-                        print(username, target)
+                        print(string.format("[MASTER] Username: %s, Target: %s", username, target))
                         break
                     end
                 end
