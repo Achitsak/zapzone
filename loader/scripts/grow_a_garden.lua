@@ -7,7 +7,7 @@ until game:GetService("Players").LocalPlayer:GetAttribute('DataFullyLoaded') == 
 print('this is loadstring for grow a garden')
 getgenv().ConfigsKaitun = {
 	["Stack Plant"] = true,
-	["Low Cpu"] = true,
+	["Low Cpu"] = false,
 	["Rejoin When Update"] = true,
 	["Limit Tree"] = {
 		["Limit"] = 300,
