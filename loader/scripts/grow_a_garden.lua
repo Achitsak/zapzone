@@ -8,18 +8,17 @@ print('this is loadstring for grow a garden')
 getgenv().ConfigsKaitun = {
 	["Stack Plant"] = true,
 	["Low Cpu"] = true,
- 
 	["Rejoin When Update"] = true,
- 
 	["Limit Tree"] = {
-		["Limit"] = 100,
-		["Destroy Untill"] = 100,
- 
+		["Limit"] = 300,
+		["Destroy Untill"] = 280,
+		
 		["Safe Tree"] = {
-			"Moon Blossom"
+			"Moon Blossom",
+			"Fossilight",
 		}
 	},
- 
+
 	Seed = {
 		Buy = {
 			Mode = "Auto", -- Custom , Auto
@@ -32,20 +31,17 @@ getgenv().ConfigsKaitun = {
 			Select = {
  				"Cactus",
 				"Pumpkin",
-				"Strawberry",
-				"Paradise Petals",
-				"Stonebite",
-				"Carrot",
 				"Watermelon",
 				"Bamboo",
 				"Mango",
+				"Grape",
+				"Pepper",
 				"Apple",
 				"Coconut",
 				"Dragon Fruit",
-				"Paradise Petal",
-				"Horned Dinoshroom",
-				"Boneboo",
-				"Firefly Fern",
+				"Spiked Mango",
+				"Taro Flower",
+				"Dragon Sapling",
 			},
 			Lock = {
 				"Sunflower",
@@ -61,146 +57,143 @@ getgenv().ConfigsKaitun = {
 				"Mushroom",
 				"Loquat",
 				"Fossilight",
+				"Maple Apple",
+				"Hinomai",
+				"Fossilight",
+				"Zen Rocks",
 				"Giant Pinecone",
 				"Grand Volcania",
 				"Bone Blossom"
 			}
 		}
 	},
- 
+	
 	["Seed Pack"] = {
 		Locked = {
- 
+			
 		}
 	},
- 
+	
 	Events = {
 		Dino = true,
- 
+
 		["Traveling Shop"] = {
-            "Night Staff",
-            "Bee Egg",
-            "Star Caller"
-		},
- 
-		["Summer Harvest"] = {
-			["Do At Money"] = 1000000,
-			["Point Limit"] = 15000,
+                        "Bee Egg",
+                        "Night Staff",
+                        "Star Caller",
 		},
 		Craft = {
 			"Ancient Seed Pack",
-			"Stalk Sprout Sprinkler",
-			"Primal Egg",
-			"Dinosaur Egg",
-			"Lightning Rod",
-			"Special Sprays",
-			"Bee Egg",
 			"Anti Bee Egg",
-			"Amber Spine Seed",
-			"Horsetail",
+			"Primal Egg",
 		},
 		Shop = {
-			"Oasis Egg",
-			"Paradise Egg",
+			"Zen Egg",
+			"Zen Seed Pack",
+			"Spiked Mango",
+			"Pet Shard Tranquil",
+			"Koi",
+			"Lightning Rod",
 		}
 	},
- 
+	
 	Gear = {
 		Buy = { 
 			"Master Sprinkler",
 			"Godly Sprinkler",
 			"Advanced Sprinkler",
-			"Tanning Mirror",
-			"Magnifying Glass",
+			"Basic Sprinkler",
 			"Lightning Rod",
+			"Level Up Lollipop",
+			"Medium Treat",
+			"Medium Toy",
 		},
 		Lock = {
 			"Master Sprinkler",
 			"Godly Sprinkler",
 			"Advanced Sprinkler",
-			"Tanning Mirror",
-			"Magnifying Glass",
+			"Basic Sprinkler",
 			"Lightning Rod",
+			"Level Up Lollipop",
+			"Medium Treat",
+			"Medium Toy",
 		},
 	},
- 
+
 	Eggs = {
 		Place = {
-			"Dinosaur Egg",
+			"Zen Egg",
 			"Primal Egg",
+			"Dinosaur Egg",
 			"Oasis Egg",
 			"Anti Bee Egg",
-			"Paradise Egg",
-			"Bug Egg",
-			"Mythical Egg",
+			"Night Egg",
 			"Legendary Egg",
-			"Uncommon Egg",
-			"Rare Summer Egg",
+			"Bug Egg",
+			"Paradise Egg",
 			"Bee Egg",
-			"Rare Egg",
+			"Rare Summer Egg",
+			"Mythical Egg",
 		},
 		Buy = {
-			"Dinosaur Egg",
-			"Primal Egg",
-			"Oasis Egg",
 			"Bee Egg",
-			"Anti Bee Egg",
+			"Oasis Egg",
 			"Paradise Egg",
+			"Anti Bee Egg",
+			"Night Egg",
+			"Legendary Egg",
+			"Rare Summer Egg",
 			"Bug Egg",
 			"Mythical Egg",
-			"Legendary Egg",
-			"Uncommon Egg",
-			"Rare Summer Egg",
-			"Rare Egg",
 		}
 	},
- 
+	
 	Pets = {
 		["Upgrade Slot"] = {
 			["Pet"] = {
+
 			},
-			["Limit Upgrade"] = 3,
+			["Limit Upgrade"] = 4,
 			["Equip When Done"] = {
-				"Ostrich",
+				"Tanchozuru",
 				"Seal",
 			},
 		},
 		Locked = {
-            "T-Rex",
-            "Spinosaurus",
-            "Stegosaurus",
-            "Brontosaurus",
-            "Ankylosaurus",
-            "Dilophosaurus",
-            "Pachycephalosaurus	",
-            "Iguanodon",
-            "Pachycephalosaurus	",
-            "Dragonfly",
-            "Night Owl",
-            "Queen Bee",
-            "Raccoon",
-            "Disco Bee",
-            "Fennec Fox",
-            "Disco Bee",
-            "Butterfly",
-            "Mimic Octopus",
-            "Queen Bee",
-            "Red Fox",
-            "Blood Owl",
-            ["Blood Kiwi"] = 5,
-            ["Rooster"] = 5,
+			"Koi",
+			"Tanuki",
+			"Tanchozuru",
+			"Kappa",
+			"Kitsune",
+			"Dilophosaurus",
+			"Moon Cat",
+			"Capybara",
+			"Spinosaurus",
+			"Bear Bee",
+			"T-Rex",
+			"Brontosaurus",
+			"Disco Bee",
+			"Butterfly",
+			"Queen Bee",
+			"Dragonfly",
+			"Raccoon",
+			"Fennec Fox",
+			"Mimic Octopus",
+			"Red Fox",
+			"Blood Owl",
+			["Starfish"] = 10,
 		},
-		LockPet_Weight = 10, -- if Weight >= 10 they will locked,
-		Instant_Sell = {
-			"Dog",
+		LockPet_Weight = 6, -- if Weight >= 10 they will locked,
+		Instant_Sell = {		
+				"Shiba Inu",
 		}
 	},
- 
+
 	Webhook = {
-		UrlPet = "",
-		UrlSeed = "",
-		PcName = "PC",
- 
+		UrlPet = "xxx",
+		UrlSeed = "xxx",
+		PcName = "xxx",
+		
 		Noti = {
 			Seeds = {
 				"Sunflower",
@@ -208,19 +201,16 @@ getgenv().ConfigsKaitun = {
 				"Elephant Ears",
 			},
 			SeedPack = {
-				"Idk",
+				"Idk"
 			},
 			Pets = {
-				"Dragonfly",
-				"Night Owl",
-				"Queen Bee",
-				"Raccoon",
-				"Disco Bee",
-				"Fennec Fox",
 				"Disco Bee",
 				"Butterfly",
 				"Mimic Octopus",
-				"Red Fox",
+				"Queen Bee",
+				"Dragonfly",
+				"Raccoon",
+				"Fennec Fox",
 			},
 			Pet_Weight_Noti = true,
 		}
