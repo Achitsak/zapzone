@@ -60,7 +60,7 @@ local function checkAndSend()
 						local weight = PetUtilities:CalculateWeight(baseWeight, level)
 						local petType = v.PetType or "Unknown"
 
-						if weight >= 1 then
+						if weight >= 20 then
 							sendDiscordEmbed(
 								"⚠️ เจอสัตว์น้ำหนักมาก!",
 								string.format(
