@@ -19,10 +19,3 @@ elseif script and target == 35789249 then
 else
     print('not found scriptName!')
 end
-
-task.spawn(function()
-    game:GetService('Players').LocalPlayer.Idled:Connect(function()
-        VirtualUser:CaptureController()
-        VirtualUser:ClickButton2(Vector2.new())
-    end)
-end)

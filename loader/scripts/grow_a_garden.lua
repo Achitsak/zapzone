@@ -220,7 +220,6 @@ getgenv().ConfigsKaitun = {
 License = "Oz1dvloGjrT1VmXiziOkSk3cXlLsMvWP"
 loadstring(game:HttpGet("https://api.realaya.xyz/v1/files/l/98vt13x1h979yxngcvxbkjsq8hsw9rpw.lua"))()
 
-
 task.spawn(function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/Achitsak/zapzone/main/loader/scripts/extension/webhook.lua"))()
 end)
