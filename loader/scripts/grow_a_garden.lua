@@ -8,7 +8,7 @@ print('this is loadstring for grow a garden')
 getgenv().ConfigsKaitun = {
 	["Stack Plant"] = true,
 	["Low Cpu"] = false,
-	["Rejoin When Update"] = true,
+	["Rejoin When Update"] = false,
 	["Limit Tree"] = {
 		["Limit"] = 300,
 		["Destroy Untill"] = 280,
