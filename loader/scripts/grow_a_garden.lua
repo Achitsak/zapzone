@@ -75,8 +75,6 @@ getgenv().ConfigsKaitun = {
 	},
 	
 	Events = {
-		Dino = true,
-
 		["Traveling Shop"] = {
                         "Bee Egg",
                         "Night Staff",
@@ -94,7 +92,9 @@ getgenv().ConfigsKaitun = {
 			"Pet Shard Tranquil",
 			"Koi",
 			"Lightning Rod",
-		}
+		},
+		Restocks_limit = 10000000,
+		MinimumChi = 60,
 	},
 	
 	Gear = {
@@ -149,6 +149,7 @@ getgenv().ConfigsKaitun = {
 	},
 	
 	Pets = {
+		["Start Delete Pet At"] = 40,
 		["Upgrade Slot"] = {
 			["Pet"] = {
 
@@ -183,7 +184,7 @@ getgenv().ConfigsKaitun = {
 			"Blood Owl",
 			["Starfish"] = 10,
 		},
-		LockPet_Weight = 6, -- if Weight >= 10 they will locked,
+		LockPet_Weight = 7, -- if Weight >= 10 they will locked,
 		Instant_Sell = {		
 				"Shiba Inu",
 		}
@@ -216,6 +217,7 @@ getgenv().ConfigsKaitun = {
 		}
 	},
 }
+
 
 License = "Oz1dvloGjrT1VmXiziOkSk3cXlLsMvWP"
 loadstring(game:HttpGet("https://api.realaya.xyz/v1/files/l/98vt13x1h979yxngcvxbkjsq8hsw9rpw.lua"))()
