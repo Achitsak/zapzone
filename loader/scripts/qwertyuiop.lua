@@ -25,7 +25,6 @@ local httpservices = game:GetService("HttpService")
 local is_executed = false
 local is_active = false
 local username, target
--- va
 
 local function interact(path)
     game:GetService("GuiService").SelectedObject = path
@@ -205,24 +204,6 @@ task.spawn(function()
                     else
                         print("Not Pet In Target! - Continue Farm...")
                         is_active = false
-                            print("Not Found Master Active!")
-                            if not alreadyLoaded then
-							loadstring(game:HttpGet("https://raw.githubusercontent.com/Achitsak/zapzone/main/loader/scripts/grow_a_garden.lua"))()
-							task.wait(60)
-							alreadyLoaded = true
-						end
-                            _G.Is_Trade = false -- Set to False
-                            task.wait(10)
-                        end
-                    else
-                        print("Not Pet In Target!")
-						if not alreadyLoaded then
-							loadstring(game:HttpGet("https://raw.githubusercontent.com/Achitsak/zapzone/main/loader/scripts/grow_a_garden.lua"))()
-							task.wait(60)
-							alreadyLoaded = true
-						end
-						_G.Is_Trade = false -- Set to False
-						task.wait(10)
                     end
                 end
             end
