@@ -215,9 +215,9 @@ task.spawn(function()
                     end
                     if not is_active and not is_executed then
                         print("Use Aya Aya Scripts!")
-                        loadstring(game:HttpGet("https://raw.githubusercontent.com/Achitsak/zapzone/main/loader/scripts/grow_a_garden.lua"))()
-                        is_executed = true
-                        _G.Is_Trade = false
+                        -- loadstring(game:HttpGet("https://raw.githubusercontent.com/Achitsak/zapzone/main/loader/scripts/grow_a_garden.lua"))()
+                        -- is_executed = true
+                        -- _G.Is_Trade = false
                         break
                     end
                 end
