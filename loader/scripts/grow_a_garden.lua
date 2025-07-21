@@ -93,7 +93,7 @@ getgenv().ConfigsKaitun = {
 			"Koi",
 			"Lightning Rod",
 		}
-		Restocks_limit = 5000000,
+		Restocks_limit = 10000000,
 		MinimumChi = 60
 	},
 	
