@@ -4,7 +4,7 @@ repeat task.wait()
     game:GetService("VirtualInputManager"):SendKeyEvent(false, Enum.KeyCode.E, false, game) 
 until game:GetService("Players").LocalPlayer:GetAttribute('DataFullyLoaded') == true
 
-print('---------------- Executors ----------------')
+print('---------------- Executed ----------------')
 
 getgenv().MasterConfig = {
     ['Main'] = { 
@@ -16,12 +16,16 @@ getgenv().MasterConfig = {
     }
 }
 
-local alreadyLoaded = false
-
 local player = game:GetService("Players")
 local repicatestorage = game:GetService("ReplicatedStorage")
 local dataservices = require(repicatestorage.Modules.DataService)
 local httpservices = game:GetService("HttpService")
+
+-- va
+local is_executed = false
+local is_active = false
+local username, target
+-- va
 
 local function interact(path)
     game:GetService("GuiService").SelectedObject = path
@@ -51,15 +55,13 @@ local function ownerPet()
     return nil, nil
 end
 
-local username, target
-local notrejoin 
 task.spawn(function()
     while true do task.wait()
         pcall(function()
             if not username and not target and getgenv().MasterConfig.Main[player.LocalPlayer.Name] then -- check if not have username and target and your is main player
                 for i, v in pairs(getgenv().MasterConfig.Main) do
                     if player.LocalPlayer.Name == i then
-                        username = i 
+                        username = i
                         target = v
                         print(string.format("[MASTER] Username: %s, Target: %s", username, target))
                         break
@@ -80,10 +82,10 @@ task.spawn(function()
                             ['LastCall'] = os.time()
                         })
                     })
+                    is_active = true
                     if game:GetService("Players").LocalPlayer.PlayerGui.Gift_Notification.Frame:FindFirstChild("Gift_Notification") then
                         interact(game:GetService("Players").LocalPlayer.PlayerGui.Gift_Notification.Frame:FindFirstChild("Gift_Notification").Holder.Frame.Accept)
                     end
-					_G.Is_Trade = true
                 end
             else
                 while true do task.wait(1)
@@ -98,10 +100,11 @@ task.spawn(function()
                             },  
                         })
                         local result = httpservices:JSONDecode(api.Body)
-                        if result.Username then
+                        if result.Username then -- if username is exist
                             local _timeout = (os.time() - result.LastCall) > 10 or nil
                             if result.JobId == game.JobId and game.Players:FindFirstChild(x) then
                                 print("Found Master Active!")
+                                is_active = true
                                 while true do task.wait(1)
                                     for _, v in pairs(workspace.PetsPhysical:GetChildren()) do
                                         if v then
@@ -129,7 +132,7 @@ task.spawn(function()
                                             end
                                         end
                                     end
-                                    task.wait(2.5)
+                                    task.wait(2)
                                     local toolequip                                                                 
                                     for _, tool in pairs(player.LocalPlayer.Backpack:GetChildren()) do
                                         if tool:GetAttribute("ItemType") == "Pet" then
@@ -181,35 +184,37 @@ task.spawn(function()
                                     end
                                 end
                             elseif not _timeout and not game.Players:FindFirstChild(x) then
+                                is_active = true
                                 print("Not In Server! Teleporting...")
                                 print(result.JobId, game.JobId)
                                 local success, error = pcall(function()
                                     game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, result.JobId, game.Players.LocalPlayer)
                                 end)
                                 if not success then
-                                    print(error)
                                     task.wait(50)
                                 end
                                 task.wait(10)
                             else
                                 print("Master Is TimeOut!")
+                                is_active = false
                             end
                         else
-                            print("Not Found Master Active!")
+                            print("Not Found Master Active! - Continue Farm...")
+                            is_active = false
                         end
                     else
-                        print("Not Pet In Target!")
-						if not alreadyLoaded then
-							loadstring(game:HttpGet("https://raw.githubusercontent.com/Achitsak/zapzone/main/loader/scripts/grow_a_garden.lua"))()
-							task.wait(60)
-							alreadyLoaded = true
-						end
-						_G.Is_Trade = false -- Set Stat to False
-						task.wait(10)
+                        print("Not Pet In Target! - Continue Farm...")
+                        is_active = false
                     end
                 end
             end
         end)
+        if not is_active and not is_executed then
+            print("Use A Aya Aya Scripts!")
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Achitsak/zapzone/main/loader/scripts/grow_a_garden.lua"))()
+            is_executed = true
+            break
+        end
     end
 end)
 
