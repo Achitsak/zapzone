@@ -198,6 +198,7 @@ task.spawn(function()
                             else
                                 print("Master Is TimeOut!")
                                 is_active = false
+                                task.wait(5)
                             end
                         else
                             print("Not Found Master Active! - Continue Farm...")
