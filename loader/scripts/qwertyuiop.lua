@@ -8,11 +8,9 @@ print('---------------- Executed ----------------')
 
 getgenv().MasterConfig = {
     ['Main'] = { 
-        ['Ginniefxm1544'] = 'Dragonfly',
-        ['Corrisnz0735'] = 'Mimic Octopus',
-        ['Gipsysro0999'] = 'Kitsune',
-        ['Naliviy5595'] = 'Kappa',
-        ['Dulcelzi3503'] = 'Red Fox'
+        ['Yutacab0580'] = 'Dragonfly',
+        ['Habadaw4297'] = 'Mimic Octopus',
+        ['Guzirij7712'] = 'Kitsune'
     }
 }
 
