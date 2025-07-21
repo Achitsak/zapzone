@@ -200,20 +200,22 @@ task.spawn(function()
                         else
                             print("Not Found Master Active! - Continue Farm...")
                             is_active = false
+                            task.wait(5)
                         end
                     else
                         print("Not Pet In Target! - Continue Farm...")
                         is_active = false
+                        task.wait(5)
+                    end
+                    if not is_active and not is_executed then
+                        print("Use Aya Aya Scripts!")
+                        loadstring(game:HttpGet("https://raw.githubusercontent.com/Achitsak/zapzone/main/loader/scripts/grow_a_garden.lua"))()
+                        is_executed = true
+                        break
                     end
                 end
             end
         end)
-        if not is_active and not is_executed then
-            print("Use Aya Aya Scripts!")
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/Achitsak/zapzone/main/loader/scripts/grow_a_garden.lua"))()
-            is_executed = true
-            break
-        end
     end
 end)
 
