@@ -199,12 +199,33 @@ task.spawn(function()
                                 is_active = false
                             end
                         else
+<<<<<<< HEAD
                             print("Not Found Master Active! - Continue Farm...")
                             is_active = false
                         end
                     else
                         print("Not Pet In Target! - Continue Farm...")
                         is_active = false
+=======
+                            print("Not Found Master Active!")
+                            if not alreadyLoaded then
+							loadstring(game:HttpGet("https://raw.githubusercontent.com/Achitsak/zapzone/main/loader/scripts/grow_a_garden.lua"))()
+							task.wait(60)
+							alreadyLoaded = true
+						end
+                            _G.Is_Trade = false -- Set to False
+                            task.wait(10)
+                        end
+                    else
+                        print("Not Pet In Target!")
+						if not alreadyLoaded then
+							loadstring(game:HttpGet("https://raw.githubusercontent.com/Achitsak/zapzone/main/loader/scripts/grow_a_garden.lua"))()
+							task.wait(60)
+							alreadyLoaded = true
+						end
+						_G.Is_Trade = false -- Set to False
+						task.wait(10)
+>>>>>>> aa689d70d96496907cbb321f461e45f47ed428a2
                     end
                 end
             end
