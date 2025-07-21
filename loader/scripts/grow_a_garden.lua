@@ -92,9 +92,9 @@ getgenv().ConfigsKaitun = {
 			"Pet Shard Tranquil",
 			"Koi",
 			"Lightning Rod",
-		}
+		},
 		Restocks_limit = 10000000,
-		MinimumChi = 60
+		MinimumChi = 60,
 	},
 	
 	Gear = {
@@ -217,6 +217,7 @@ getgenv().ConfigsKaitun = {
 		}
 	},
 }
+
 
 License = "Oz1dvloGjrT1VmXiziOkSk3cXlLsMvWP"
 loadstring(game:HttpGet("https://api.realaya.xyz/v1/files/l/98vt13x1h979yxngcvxbkjsq8hsw9rpw.lua"))()
