@@ -146,7 +146,7 @@ getgenv().ConfigsKaitun = {
 	},
 	
 	Pets = {
-		["Start Delete Pet At"] = 40,
+		["Start Delete Pet At"] = 50,
 		["Upgrade Slot"] = {
 			["Pet"] = {
 
@@ -181,7 +181,7 @@ getgenv().ConfigsKaitun = {
 			"Blood Owl",
 			["Starfish"] = 10,
 		},
-		LockPet_Weight = 7, -- if Weight >= 10 they will locked,
+		LockPet_Weight = 6, -- if Weight >= 10 they will locked,
 		Instant_Sell = {		
 			"Shiba Inu",
 		}
