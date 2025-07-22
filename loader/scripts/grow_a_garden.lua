@@ -3,7 +3,6 @@ repeat task.wait()
     game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.E, false, game) 
     game:GetService("VirtualInputManager"):SendKeyEvent(false, Enum.KeyCode.E, false, game) 
 until game:GetService("Players").LocalPlayer:GetAttribute('DataFullyLoaded') == true
-
 print('this is loadstring for grow a garden')
 getgenv().ConfigsKaitun = {
 	["Stack Plant"] = true,
@@ -132,7 +131,6 @@ getgenv().ConfigsKaitun = {
 			"Bug Egg",
 			"Paradise Egg",
 			"Bee Egg",
-			"Rare Summer Egg",
 			"Mythical Egg",
 		},
 		Buy = {
@@ -142,7 +140,6 @@ getgenv().ConfigsKaitun = {
 			"Anti Bee Egg",
 			"Night Egg",
 			"Legendary Egg",
-			"Rare Summer Egg",
 			"Bug Egg",
 			"Mythical Egg",
 		}
@@ -186,7 +183,7 @@ getgenv().ConfigsKaitun = {
 		},
 		LockPet_Weight = 7, -- if Weight >= 10 they will locked,
 		Instant_Sell = {		
-				"Shiba Inu",
+			"Shiba Inu",
 		}
 	},
 
