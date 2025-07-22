@@ -133,7 +133,7 @@ task.spawn(function()
                                             end
                                         end
                                     end
-                                    task.wait(2)
+                                    task.wait(1)
                                     local toolequip                                                                 
                                     for _, tool in pairs(player.LocalPlayer.Backpack:GetChildren()) do
                                         if tool:GetAttribute("ItemType") == "Pet" then
