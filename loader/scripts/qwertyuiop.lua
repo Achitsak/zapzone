@@ -215,17 +215,17 @@ task.spawn(function()
                             else
                                 print("Master Is TimeOut!")
                                 is_active = false
-                                task.wait(5)
                             end
                         else
                             print("Not Found Master Active! - Continue Farm...")
                             is_active = false
-                            task.wait(5)
                         end
                     else
                         print("Not Pet In Target! - Continue Farm...")
                         is_active = false
-                        task.wait(5)
+                    end
+                    if not is_active then
+                        task.wait(10)
                     end
                     if not is_active and not is_executed then
                         print("Use Aya Aya Scripts!")
