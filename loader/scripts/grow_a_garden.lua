@@ -7,10 +7,8 @@ print('this is loadstring for grow a garden')
 
 getgenv().ConfigsKaitun = {
 	["Stack Plant"] = true,
-	
 	["Low Cpu"] = true,
 	["Auto Rejoin"] = false,
-	
 	["Rejoin When Update"] = false,
 	["Limit Tree"] = {
 		["Limit"] = 120,
@@ -80,9 +78,9 @@ getgenv().ConfigsKaitun = {
 	
 	Events = {
 		["Traveling Shop"] = {
-                        "Bee Egg",
-                        "Night Staff",
-                        "Star Caller",
+			"Bee Egg",
+			"Night Staff",
+			"Star Caller",
 		},
 		Craft = {
 			"Ancient Seed Pack",
@@ -210,7 +208,7 @@ getgenv().ConfigsKaitun = {
 		},
 		LockPet_Weight = 7, -- if Weight >= 10 they will locked,
 		Instant_Sell = {		
-				"Shiba Inu",
+			"Shiba Inu",
 		}
 	},
 
