@@ -94,7 +94,6 @@ task.spawn(function()
             else
                 while true do task.wait()
                     local x, y = ownerPet()
-                    print(y)
                     if x and y then
                         _G.Is_Trade = true
                         local api = request({
@@ -210,7 +209,7 @@ task.spawn(function()
                             print("Not Found Master Active! - Continue Farm...")
                             is_active = false
                         end
-                    elseif not y and not x then
+                    elseif not y or not x or game.Players:FindFirstChild(x) then
                         is_active = true
                         print("Trade Succes!")
                         game:Shutdown()
