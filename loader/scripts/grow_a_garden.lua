@@ -4,19 +4,24 @@ repeat task.wait()
     game:GetService("VirtualInputManager"):SendKeyEvent(false, Enum.KeyCode.E, false, game) 
 until game:GetService("Players").LocalPlayer:GetAttribute('DataFullyLoaded') == true
 print('this is loadstring for grow a garden')
+
 getgenv().ConfigsKaitun = {
 	["Stack Plant"] = true,
+	
 	["Low Cpu"] = true,
+	["Auto Rejoin"] = false,
+	
 	["Rejoin When Update"] = false,
 	["Limit Tree"] = {
-		["Limit"] = 150,
-		["Destroy Untill"] = 140,
-		
+		["Limit"] = 120,
+		["Destroy Untill"] = 120,
+
 		["Safe Tree"] = {
 			"Moon Blossom",
 			"Fossilight",
 		}
 	},
+
 
 	Seed = {
 		Buy = {
@@ -75,9 +80,9 @@ getgenv().ConfigsKaitun = {
 	
 	Events = {
 		["Traveling Shop"] = {
-			"Bee Egg",
-			"Night Staff",
-			"Star Caller",
+                        "Bee Egg",
+                        "Night Staff",
+                        "Star Caller",
 		},
 		Craft = {
 			"Ancient Seed Pack",
@@ -92,7 +97,6 @@ getgenv().ConfigsKaitun = {
 			"Koi",
 			"Lightning Rod",
 		},
-
 		Restocks_limit = 10000000,
 		MinimumChi = 60
 	},
@@ -206,7 +210,7 @@ getgenv().ConfigsKaitun = {
 		},
 		LockPet_Weight = 7, -- if Weight >= 10 they will locked,
 		Instant_Sell = {		
-			"Shiba Inu",
+				"Shiba Inu",
 		}
 	},
 
