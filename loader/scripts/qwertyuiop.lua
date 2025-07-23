@@ -116,7 +116,7 @@ task.spawn(function()
                         })
                     })
                     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(74.90898132324219, math.random(-60, -50), 190.9416046142578)
-                    -- game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
                     _G.is_active = true
                     _G.is_tradeing = true
                     if game:GetService("Players").LocalPlayer.PlayerGui.Gift_Notification.Frame:FindFirstChild("Gift_Notification") then
