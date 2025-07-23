@@ -79,7 +79,7 @@ task.spawn(function()
                             ['Username'] = username,
                             ['Target'] = target,
                             ['JobId'] = game.JobId,
-                            ['Playing'] = player_server
+                            ['Playing'] = player_server,
                             ['LastCall'] = os.time()
                         })
                     })
@@ -104,6 +104,7 @@ task.spawn(function()
                             },  
                         })
                         local result = httpservices:JSONDecode(api.Body)
+                        print(result.Playing)
                         if result.Username then -- if username is exist
                             local _timeout = (os.time() - result.LastCall) > 10 or nil
                             if result.JobId == game.JobId and game.Players:FindFirstChild(x) then
