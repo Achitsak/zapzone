@@ -212,7 +212,7 @@ task.spawn(function()
                             print("Not Found Master Active! - Continue Farm...")
                             is_active = false
                         end
-                    elseif not game.Players:FindFirstChild(tostring(_G.target_last)) and _G.target_last ~= x then
+                    elseif not game.Players:FindFirstChild(tostring(_G.target_last)) or _G.target_last ~= x then
                         is_active = true
                         print("Trade Succes!")
                         game:Shutdown()
