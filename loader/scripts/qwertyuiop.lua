@@ -45,7 +45,7 @@ local function ownerPet()
         for petId, petInfo in pairs(inventory.Data) do
             for username, target in pairs(getgenv().MasterConfig.Main) do
                 if petInfo.PetType == target then
-                    print(petInfo.PetType)
+                    print("Pet Type: " .. petInfo.PetType)
                     return username, target
                 end
             end
@@ -90,7 +90,7 @@ task.spawn(function()
                     end
                 end
             else
-                while true do task.wait(1)
+                while true do task.wait()
                     local x, y = ownerPet()
                     if x and y then
                         _G.Is_Trade = true
