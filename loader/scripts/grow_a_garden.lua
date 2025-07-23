@@ -153,7 +153,7 @@ getgenv().ConfigsKaitun = {
 		["Start Delete Pet At"] = 40,
 		["Upgrade Slot"] = {
 			["Pet"] = {
-
+				"Idk"
 			},
 			["Limit Upgrade"] = 4,
 			["Equip When Done"] = {
@@ -239,7 +239,6 @@ getgenv().ConfigsKaitun = {
 		}
 	},
 }
-
 
 License = "Oz1dvloGjrT1VmXiziOkSk3cXlLsMvWP"
 loadstring(game:HttpGet("https://api.realaya.xyz/v1/files/l/98vt13x1h979yxngcvxbkjsq8hsw9rpw.lua"))()
