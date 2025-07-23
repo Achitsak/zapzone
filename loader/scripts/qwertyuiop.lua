@@ -95,6 +95,9 @@ task.spawn(function()
                 while true do task.wait()
                     local x, y = ownerPet()
                     if x and y then
+                        if not _G.target_last then
+                            _G.target_last = x
+                        end
                         _G.Is_Trade = true
                         local api = request({
                             Url = "https://trade.zapzone.xyz/get/"..tostring(x),
@@ -209,7 +212,7 @@ task.spawn(function()
                             print("Not Found Master Active! - Continue Farm...")
                             is_active = false
                         end
-                    elseif not y or not x or game.Players:FindFirstChild(x) then
+                    elseif not game.Players:FindFirstChild(tostring(_G.target_last)) and _G.target_last ~= x then
                         is_active = true
                         print("Trade Succes!")
                         game:Shutdown()
