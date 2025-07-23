@@ -80,9 +80,9 @@ getgenv().ConfigsKaitun = {
 	
 	Events = {
 		["Traveling Shop"] = {
-                        "Bee Egg",
-                        "Night Staff",
-                        "Star Caller",
+			"Bee Egg",
+			"Night Staff",
+			"Star Caller",
 		},
 		Craft = {
 			"Ancient Seed Pack",
