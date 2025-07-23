@@ -108,8 +108,9 @@ task.spawn(function()
                                 print("Found Master Active!")
                                 is_active = true
                                 _G.Is_Trade = true
-                                while true do task.wait(.7)
+                                while true do task.wait()
                                     local x, y = ownerPet()
+                                    local toolequip
                                     for _, v in pairs(workspace.PetsPhysical:GetChildren()) do
                                         if v then
                                             local owner = v:GetAttribute('OWNER') 
@@ -136,8 +137,7 @@ task.spawn(function()
                                             end
                                         end
                                     end
-                                    task.wait(2)
-                                    local toolequip                                                                 
+                                    task.wait(2.5)                                                                 
                                     for _, tool in pairs(player.LocalPlayer.Backpack:GetChildren()) do
                                         if tool:GetAttribute("ItemType") == "Pet" then
                                             local namepet = tool.Name:gsub("%s%[.*", "")
@@ -169,7 +169,6 @@ task.spawn(function()
                                     if toolequip then
                                         local chr = player.LocalPlayer.Character
                                         local bp = player.LocalPlayer.Backpack
-                                        local target = player:FindFirstChild(x)
                                         if bp:FindFirstChild(toolequip) then
                                             local tool = bp:FindFirstChild(toolequip)
                                             if tool then
@@ -190,6 +189,7 @@ task.spawn(function()
                                             }
                                             game:GetService("ReplicatedStorage"):WaitForChild("GameEvents"):WaitForChild("PetGiftingService"):FireServer(unpack(args))
                                         end
+
                                     elseif toolequip and not game.Players:FindFirstChild(x) then
                                         print("Not Found Master Active! [2]")
                                         _timeout = false                                        
