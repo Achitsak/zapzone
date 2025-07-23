@@ -4,7 +4,7 @@ repeat task.wait()
     game:GetService("VirtualInputManager"):SendKeyEvent(false, Enum.KeyCode.E, false, game) 
 until game:GetService("Players").LocalPlayer:GetAttribute('DataFullyLoaded') == true
 print('this is loadstring for grow a garden')
-getgenv().ConfigsKaitun = {
+ggetgenv().ConfigsKaitun = {
 	["Stack Plant"] = true,
 	["Low Cpu"] = true,
 	["Rejoin When Update"] = false,
@@ -75,9 +75,9 @@ getgenv().ConfigsKaitun = {
 	
 	Events = {
 		["Traveling Shop"] = {
-                        "Bee Egg",
-                        "Night Staff",
-                        "Star Caller",
+			"Bee Egg",
+			"Night Staff",
+			"Star Caller",
 		},
 		Craft = {
 			"Ancient Seed Pack",
@@ -92,8 +92,9 @@ getgenv().ConfigsKaitun = {
 			"Koi",
 			"Lightning Rod",
 		},
+
 		Restocks_limit = 10000000,
-		MinimumChi = 60,
+		MinimumChi = 60
 	},
 	
 	Gear = {
@@ -140,21 +141,43 @@ getgenv().ConfigsKaitun = {
 			"Anti Bee Egg",
 			"Night Egg",
 			"Legendary Egg",
+			"Rare Summer Egg",
 			"Bug Egg",
 			"Mythical Egg",
 		}
 	},
 	
 	Pets = {
-		["Start Delete Pet At"] = 50,
+		["Start Delete Pet At"] = 40,
 		["Upgrade Slot"] = {
 			["Pet"] = {
 
 			},
 			["Limit Upgrade"] = 4,
 			["Equip When Done"] = {
-				"Tanchozuru",
-				"Seal",
+				["Seal"] = { 1, 70, 1 }, -- 1 mean equip only 1 pet , 70 mean equip only level pet lower than 70 the one on the last mean first priority will ues first if possible 
+				["Starfish"] = { 1, 70 },
+				["Koi"] = { 1, 70 },
+				["Tanuki"] = { 1, 70 },
+				["Tanchozuru"] = { 1, 70 },
+				["Kappa"] = { 1, 70 },
+				["Kitsune"] = { 0, 70 },
+				["Dilophosaurus"] = { 1, 70 },
+				["Moon Cat"] = { 1, 70 },
+				["Capybara"] = { 1, 70 },
+				["Spinosaurus"] = { 0, 70 },
+				["Bear Bee"] = { 1, 70 },
+				["T-Rex"] = { 0, 70 },
+				["Brontosaurus"] = { 1, 70 },
+				["Disco Bee"] = { 0, 70 },
+				["Butterfly"] = { 0, 70 },
+				["Queen Bee"] = { 0, 70 },
+				["Dragonfly"] = { 0, 70 },
+				["Raccoon"] = { 0, 70 },
+				["Fennec Fox"] = { 0, 70 },
+				["Mimic Octopus"] = { 0, 70 },
+				["Red Fox"] = { 0, 70 },
+				["Blood Owl"] = { 1, 70 },
 			},
 		},
 		Locked = {
@@ -181,9 +204,9 @@ getgenv().ConfigsKaitun = {
 			"Blood Owl",
 			["Starfish"] = 10,
 		},
-		LockPet_Weight = 6, -- if Weight >= 10 they will locked,
+		LockPet_Weight = 7, -- if Weight >= 10 they will locked,
 		Instant_Sell = {		
-			"Shiba Inu",
+				"Shiba Inu",
 		}
 	},
 
