@@ -104,7 +104,6 @@ task.spawn(function()
                             },  
                         })
                         local result = httpservices:JSONDecode(api.Body)
-                        print(result.Playing)
                         if result.Username then -- if username is exist
                             local _timeout = (os.time() - result.LastCall) > 10 or nil
                             if result.JobId == game.JobId and game.Players:FindFirstChild(x) then
@@ -169,7 +168,6 @@ task.spawn(function()
                                         end
                                     end
                                     while toolequip do task.wait() 
-                                        print("xxxx")
                                         if toolequip then
                                             local chr = player.LocalPlayer.Character
                                             local bp = player.LocalPlayer.Backpack
@@ -198,20 +196,17 @@ task.spawn(function()
                                             _timeout = false                                        
                                         elseif not y and not toolequip then
                                             print("Trade Success!")
-                                            wait(5)
-                                            player.LocalPlayer:Kick("Trade Success!")
                                             game:Shutdown()
                                         end
                                     end
                                 end
-                            elseif not _timeout and not game.Players:FindFirstChild(x) then
-                                is_active = true
-                                _G.Is_Trade = true
-                                print("Not In Server! Teleporting...")
-                                print(result.JobId, game.JobId)
+                            elseif not _timeout and result.Playing < 5 and not game.Players:FindFirstChild(x) then
+                                print(result.JobId, result.Playing, game.JobId)
                                 local success, error = pcall(function()
                                     game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, result.JobId, game.Players.LocalPlayer)
                                 end)
+                                is_active = true
+                                _G.Is_Trade = true
                                 if not success then
                                     task.wait(50)
                                 end
