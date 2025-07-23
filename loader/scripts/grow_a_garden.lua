@@ -4,7 +4,7 @@ repeat task.wait()
     game:GetService("VirtualInputManager"):SendKeyEvent(false, Enum.KeyCode.E, false, game) 
 until game:GetService("Players").LocalPlayer:GetAttribute('DataFullyLoaded') == true
 print('this is loadstring for grow a garden')
-ggetgenv().ConfigsKaitun = {
+getgenv().ConfigsKaitun = {
 	["Stack Plant"] = true,
 	["Low Cpu"] = true,
 	["Rejoin When Update"] = false,
@@ -206,7 +206,7 @@ ggetgenv().ConfigsKaitun = {
 		},
 		LockPet_Weight = 7, -- if Weight >= 10 they will locked,
 		Instant_Sell = {		
-				"Shiba Inu",
+			"Shiba Inu",
 		}
 	},
 
