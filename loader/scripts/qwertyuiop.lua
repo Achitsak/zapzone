@@ -10,7 +10,7 @@ getgenv().MasterConfig = {
     ['Main'] = { 
         ['Yutacab0580'] = 'Dragonfly',
         ['Habadaw4297'] = 'Mimic Octopus',
-        ['Samicas4905'] = 'Nihonzaru',
+        ['Tofudir4256'] = 'Nihonzaru',
         ['Solopud9293'] = 'Tanuki',
         ['Guzirij7712'] = 'Kitsune'
     }
