@@ -10,8 +10,8 @@ getgenv().MasterConfig = {
     ['Main'] = { 
         ['Yutacab0580'] = 'Dragonfly',
         ['Habadaw4297'] = 'Mimic Octopus',
-        ['Solopud9293'] = 'Tanuki',
         ['Samicas4905'] = 'Nihonzaru',
+        ['Solopud9293'] = 'Tanuki',
         ['Guzirij7712'] = 'Kitsune'
     }
 }
@@ -103,6 +103,7 @@ task.spawn(function()
                                 ["Content-Type"] = "application/json"
                             },  
                         })
+                        print(y)
                         local result = httpservices:JSONDecode(api.Body)
                         if result.Username then -- if username is exist
                             local _timeout = (os.time() - result.LastCall) > 10 or nil
@@ -189,9 +190,6 @@ task.spawn(function()
                                 elseif toolequip and not game.Players:FindFirstChild(x) then
                                     print("Not Found Master Active! [2]")
                                     _timeout = false                                        
-                                elseif not y and not toolequip then
-                                    print("Trade Success!")
-                                    game:Shutdown()   
                                 end
                             elseif not _timeout and result.Playing < 5 and not game.Players:FindFirstChild(x) then
                                 print(result.JobId, result.Playing, game.JobId)
@@ -212,6 +210,9 @@ task.spawn(function()
                             print("Not Found Master Active! - Continue Farm...")
                             is_active = false
                         end
+                    elseif not y and game.Players:FindFirstChild(x) then
+                        print("Trade Succes!")
+                        game:Shutdown()
                     else
                         print("Not Pet In Target! - Continue Farm...")
                         is_active = false
