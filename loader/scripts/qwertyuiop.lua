@@ -45,7 +45,7 @@ local function ownerPet()
         for petId, petInfo in pairs(inventory.Data) do
             for username, target in pairs(getgenv().MasterConfig.Main) do
                 if petInfo.PetType == target then
-                    print(petInfo.PetType)
+                    print("Pet:", petInfo.PetType)
                     return username, target
                 end
             end
@@ -107,30 +107,27 @@ task.spawn(function()
                         if result.Username then -- if username is exist
                             local _timeout = (os.time() - result.LastCall) > 10 or nil
                             if result.JobId == game.JobId and game.Players:FindFirstChild(x) then
-                                print("Found Master Active!")
-                                is_active = true
                                 _G.Is_Trade = true
-                                while true do task.wait()
-                                    local toolequip
-                                    for _, v in pairs(workspace.PetsPhysical:GetChildren()) do
-                                        if v then
-                                            local owner = v:GetAttribute('OWNER') 
-                                            local uuid = v:GetAttribute("UUID")
-                                            if owner == player.LocalPlayer.Name then
-                                                local children = workspace.PetsPhysical:GetChildren()
-                                                if children[_] then
-                                                    for ii, vv in pairs(children[_]:GetChildren()) do
-                                                        if vv:IsA('Model') then
-                                                            local type_ = game:GetService("Players").LocalPlayer.PlayerGui.ActivePetUI.Frame.Main.ScrollingFrame[tostring(uuid)].PET_TYPE or ""
-                                                            if type_ then
-                                                                if type_.text == tostring(y) then
-                                                                    print(string.format('Keep Up -> pet: %s, uuid: %s', type_.text, uuid))
-                                                                    local args = {
-                                                                        "UnequipPet",
-                                                                        tostring(uuid)
-                                                                    }
-                                                                    game:GetService("ReplicatedStorage"):WaitForChild("GameEvents"):WaitForChild("PetsService"):FireServer(unpack(args))
-                                                                end
+                                is_active = true
+                                local toolequip
+                                for _, v in pairs(workspace.PetsPhysical:GetChildren()) do
+                                    if v then
+                                        local owner = v:GetAttribute('OWNER') 
+                                        local uuid = v:GetAttribute("UUID")
+                                        if owner == player.LocalPlayer.Name then
+                                            local children = workspace.PetsPhysical:GetChildren()
+                                            if children[_] then
+                                                for ii, vv in pairs(children[_]:GetChildren()) do
+                                                    if vv:IsA('Model') then
+                                                        local type_ = game:GetService("Players").LocalPlayer.PlayerGui.ActivePetUI.Frame.Main.ScrollingFrame[tostring(uuid)].PET_TYPE or ""
+                                                        if type_ then
+                                                            if type_.text == tostring(y) then
+                                                                print(string.format('Keep Up -> pet: %s, uuid: %s', type_.text, uuid))
+                                                                local args = {
+                                                                    "UnequipPet",
+                                                                    tostring(uuid)
+                                                                }
+                                                                game:GetService("ReplicatedStorage"):WaitForChild("GameEvents"):WaitForChild("PetsService"):FireServer(unpack(args))
                                                             end
                                                         end
                                                     end
@@ -138,67 +135,63 @@ task.spawn(function()
                                             end
                                         end
                                     end
-                                    
-                                    for _, tool in pairs(player.LocalPlayer.Backpack:GetChildren()) do
-                                        if tool:GetAttribute("ItemType") == "Pet" then
-                                            local namepet = tool.Name:gsub("%s%[.*", "")
-                                            if namepet == y then
-                                                if tool:GetAttribute("d") == true then
-                                                    local args = {
-                                                        tool
-                                                    }
-                                                    game:GetService("ReplicatedStorage"):WaitForChild("GameEvents"):WaitForChild("Favorite_Item"):FireServer(unpack(args))
-                                                end
-                                                toolequip = tool.Name
-                                            end
-                                        end
-                                    end
-                                    for _, tool in pairs(player.LocalPlayer.Character:GetChildren()) do
-                                        if tool:GetAttribute("ItemType") == "Pet" then
-                                            local namepet = tool.Name:gsub("%s%[.*", "")
-                                            if namepet == y then
-                                                if tool:GetAttribute("d") == true then
-                                                    local args = {
-                                                        tool
-                                                    }
-                                                    game:GetService("ReplicatedStorage"):WaitForChild("GameEvents"):WaitForChild("Favorite_Item"):FireServer(unpack(args))
-                                                end
-                                                toolequip = tool.Name
-                                            end
-                                        end
-                                    end
-                                    while toolequip do task.wait() 
-                                        if toolequip then
-                                            local chr = player.LocalPlayer.Character
-                                            local bp = player.LocalPlayer.Backpack
-                                            if bp:FindFirstChild(toolequip) then
-                                                local tool = bp:FindFirstChild(toolequip)
-                                                if tool then
-                                                    print("Equipping", tool)
-                                                    chr.Humanoid:EquipTool(tool)
-                                                    task.wait(1)
-                                                    local args = {
-                                                        "GivePet",
-                                                        game:GetService("Players"):WaitForChild(x)
-                                                    }
-                                                    game:GetService("ReplicatedStorage"):WaitForChild("GameEvents"):WaitForChild("PetGiftingService"):FireServer(unpack(args))
-                                                end
-                                            else
-                                                task.wait(1)
+                                end
+                                for _, tool in pairs(player.LocalPlayer.Backpack:GetChildren()) do
+                                    if tool:GetAttribute("ItemType") == "Pet" then
+                                        local namepet = tool.Name:gsub("%s%[.*", "")
+                                        if namepet == y then
+                                            if tool:GetAttribute("d") == true then
                                                 local args = {
-                                                    "GivePet",
-                                                    game:GetService("Players"):WaitForChild(x)
+                                                    tool
                                                 }
-                                                game:GetService("ReplicatedStorage"):WaitForChild("GameEvents"):WaitForChild("PetGiftingService"):FireServer(unpack(args))
+                                                game:GetService("ReplicatedStorage"):WaitForChild("GameEvents"):WaitForChild("Favorite_Item"):FireServer(unpack(args))
                                             end
-                                        elseif toolequip and not game.Players:FindFirstChild(x) then
-                                            print("Not Found Master Active! [2]")
-                                            _timeout = false                                        
-                                        elseif not y and not toolequip then
-                                            print("Trade Success!")
-                                            game:Shutdown()
+                                            toolequip = tool.Name
                                         end
                                     end
+                                end
+                                for _, tool in pairs(player.LocalPlayer.Character:GetChildren()) do
+                                    if tool:GetAttribute("ItemType") == "Pet" then
+                                        local namepet = tool.Name:gsub("%s%[.*", "")
+                                        if namepet == y then
+                                            if tool:GetAttribute("d") == true then
+                                                local args = {
+                                                    tool
+                                                }
+                                                game:GetService("ReplicatedStorage"):WaitForChild("GameEvents"):WaitForChild("Favorite_Item"):FireServer(unpack(args))
+                                            end
+                                            toolequip = tool.Name
+                                        end
+                                    end
+                                end
+                                if toolequip then
+                                    local chr = player.LocalPlayer.Character
+                                    local bp = player.LocalPlayer.Backpack
+                                    local tool
+                                    if bp:FindFirstChild(toolequip) then
+                                        tool = bp:FindFirstChild(toolequip)
+                                    elseif chr:FindFirstChild(toolequip) then
+                                        tool = chr:FindFirstChild(toolequip)
+                                    end
+                                    if tool then
+                                        print("Equipping:", tool)
+                                        chr.Humanoid:EquipTool(tool)
+                                        task.wait(1)
+                                        local args = {
+                                            "GivePet",
+                                            game:GetService("Players"):WaitForChild(x)
+                                        }
+                                        game:GetService("ReplicatedStorage"):WaitForChild("GameEvents"):WaitForChild("PetGiftingService"):FireServer(unpack(args))
+                                        task.wait(5)
+                                    else
+                                        warn("Tool not found in Backpack or Character!")
+                                    end
+                                elseif toolequip and not game.Players:FindFirstChild(x) then
+                                    print("Not Found Master Active! [2]")
+                                    _timeout = false                                        
+                                elseif not y and not toolequip then
+                                    print("Trade Success!")
+                                    game:Shutdown()   
                                 end
                             elseif not _timeout and result.Playing < 5 and not game.Players:FindFirstChild(x) then
                                 print(result.JobId, result.Playing, game.JobId)
