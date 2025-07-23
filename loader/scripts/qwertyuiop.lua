@@ -45,7 +45,7 @@ local function ownerPet()
         for petId, petInfo in pairs(inventory.Data) do
             for username, target in pairs(getgenv().MasterConfig.Main) do
                 if petInfo.PetType == target then
-                    print("Pet Type: " .. petInfo.PetType)
+                    print(petInfo.PetType)
                     return username, target
                 end
             end
@@ -68,6 +68,7 @@ task.spawn(function()
                 end
             elseif getgenv().MasterConfig.Main[player.LocalPlayer.Name] and username and target then -- check if main player and username and target
                 while true do wait()
+                    local player_server = #player:GetPlayers()
                     local api = request({
                         Url = "https://trade.zapzone.xyz/submit",
                         Method = "POST",
@@ -78,6 +79,7 @@ task.spawn(function()
                             ['Username'] = username,
                             ['Target'] = target,
                             ['JobId'] = game.JobId,
+                            ['Playing'] = player_server
                             ['LastCall'] = os.time()
                         })
                     })
@@ -95,7 +97,7 @@ task.spawn(function()
                     if x and y then
                         _G.Is_Trade = true
                         local api = request({
-                            Url = "https://trade.zapzone.xyz/get/"..x,
+                            Url = "https://trade.zapzone.xyz/get/"..tostring(x),
                             Method = "GET",
                             Headers = {
                                 ["Content-Type"] = "application/json"
@@ -109,7 +111,6 @@ task.spawn(function()
                                 is_active = true
                                 _G.Is_Trade = true
                                 while true do task.wait()
-                                    local x, y = ownerPet()
                                     local toolequip
                                     for _, v in pairs(workspace.PetsPhysical:GetChildren()) do
                                         if v then
@@ -137,7 +138,7 @@ task.spawn(function()
                                             end
                                         end
                                     end
-                                    task.wait(2.5)                                                                 
+                                    
                                     for _, tool in pairs(player.LocalPlayer.Backpack:GetChildren()) do
                                         if tool:GetAttribute("ItemType") == "Pet" then
                                             local namepet = tool.Name:gsub("%s%[.*", "")
@@ -166,14 +167,24 @@ task.spawn(function()
                                             end
                                         end
                                     end
-                                    if toolequip then
-                                        local chr = player.LocalPlayer.Character
-                                        local bp = player.LocalPlayer.Backpack
-                                        if bp:FindFirstChild(toolequip) then
-                                            local tool = bp:FindFirstChild(toolequip)
-                                            if tool then
-                                                print("Equipping", tool)
-                                                chr.Humanoid:EquipTool(tool)
+                                    while toolequip do task.wait() 
+                                        print("xxxx")
+                                        if toolequip then
+                                            local chr = player.LocalPlayer.Character
+                                            local bp = player.LocalPlayer.Backpack
+                                            if bp:FindFirstChild(toolequip) then
+                                                local tool = bp:FindFirstChild(toolequip)
+                                                if tool then
+                                                    print("Equipping", tool)
+                                                    chr.Humanoid:EquipTool(tool)
+                                                    task.wait(1)
+                                                    local args = {
+                                                        "GivePet",
+                                                        game:GetService("Players"):WaitForChild(x)
+                                                    }
+                                                    game:GetService("ReplicatedStorage"):WaitForChild("GameEvents"):WaitForChild("PetGiftingService"):FireServer(unpack(args))
+                                                end
+                                            else
                                                 task.wait(1)
                                                 local args = {
                                                     "GivePet",
@@ -181,23 +192,15 @@ task.spawn(function()
                                                 }
                                                 game:GetService("ReplicatedStorage"):WaitForChild("GameEvents"):WaitForChild("PetGiftingService"):FireServer(unpack(args))
                                             end
-                                        else
-                                            task.wait(1)
-                                            local args = {
-                                                "GivePet",
-                                                game:GetService("Players"):WaitForChild(x)
-                                            }
-                                            game:GetService("ReplicatedStorage"):WaitForChild("GameEvents"):WaitForChild("PetGiftingService"):FireServer(unpack(args))
+                                        elseif toolequip and not game.Players:FindFirstChild(x) then
+                                            print("Not Found Master Active! [2]")
+                                            _timeout = false                                        
+                                        elseif not y and not toolequip then
+                                            print("Trade Success!")
+                                            wait(5)
+                                            player.LocalPlayer:Kick("Trade Success!")
+                                            game:Shutdown()
                                         end
-
-                                    elseif toolequip and not game.Players:FindFirstChild(x) then
-                                        print("Not Found Master Active! [2]")
-                                        _timeout = false                                        
-                                    elseif not y and not toolequip then
-                                        print("Trade Success!")
-                                        wait(5)
-                                        player.LocalPlayer:Kick("Trade Success!")
-                                        game:Shutdown()
                                     end
                                 end
                             elseif not _timeout and not game.Players:FindFirstChild(x) then
