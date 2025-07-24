@@ -1,4 +1,5 @@
 repeat task.wait() until game:IsLoaded()
+repeat task.wait() until game.Players.LocalPlayer
 
 if not getgenv().ENV then
     getgenv().ENV = {
