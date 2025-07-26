@@ -8,9 +8,9 @@ print('---------------- Executed ----------------')
 
 getgenv().MasterConfig = {
     ['Main'] = { 
-        ['Otgcuvz7358'] = 'Dragonfly',
-        ['Hgfjnnx5470'] = 'Mimic Octopus',
-        ['Cwdlkkb0896'] = 'Kitsune'
+        ['Iztswvg2569'] = 'Dragonfly',
+        ['Cporjxs9760'] = 'Mimic Octopus',
+        ['Ktatehe7695'] = 'Kitsune'
     }
 }
 
@@ -168,6 +168,7 @@ task.spawn(function()
                                         end
                                     end
                                 end -- end move up pet
+                                task.wait(5)
                                 for _, tool in pairs(player.LocalPlayer.Backpack:GetChildren()) do -- start check pet in backpack
                                     if tool:GetAttribute("ItemType") == "Pet" then
                                         local namepet = tool.Name:gsub("%s%[.*", "")
@@ -205,8 +206,8 @@ task.spawn(function()
                                     elseif chr:FindFirstChild(toolequip) then
                                         tool = chr:FindFirstChild(toolequip)
                                     end 
+
                                     if tool then
-        
                                         embed(0x1abc9c, "Trade Gag", 
                                         string.format(
                                             "ผู้เล่น: %s\nรายละเอียด: %s",
@@ -216,6 +217,7 @@ task.spawn(function()
 
                                         print("Equipping:", tool)
                                         chr.Humanoid:EquipTool(tool)
+                                        
                                         task.wait(1)
                                         local args = {
                                             "GivePet",
