@@ -6,15 +6,15 @@ until game:GetService("Players").LocalPlayer:GetAttribute('DataFullyLoaded') == 
 print('this is loadstring for grow a garden')
 
 getgenv().ConfigsKaitun = {
-	["Stack Plant"] = true,
+	["Block Pet Gift"] = false,
 	
 	["Low Cpu"] = true,
 	["Auto Rejoin"] = true,
 	
 	["Rejoin When Update"] = false,
 	["Limit Tree"] = {
-		["Limit"] = 120,
-		["Destroy Untill"] = 120,
+		["Limit"] = 150,
+		["Destroy Untill"] = 140,
 
 		["Safe Tree"] = {
 			"Moon Blossom",
@@ -22,12 +22,34 @@ getgenv().ConfigsKaitun = {
 		}
 	},
 
-
 	Seed = {
 		Buy = {
 			Mode = "Auto", -- Custom , Auto
 			Custom = {
-
+				"Carrot",
+				"Bamboo",
+				"Pumpkin",
+				"Daffodil",
+				"Orange Tulip",
+				"Watermelon",
+				"Mushroom",
+				"Avocado",
+				"Feijoa",
+				"Cauliflower",
+				"Loquat",
+				"Green Apple",
+				"Nightshade",
+				"Firefly Fern",
+				"Soft Sunshine",
+				"Zen Rocks",
+				"Hinomai",
+				"Beanstalk",
+				"Ember Lily",
+				"Sunflower",
+				"Sugar Apple",
+				"Burning Bud",
+				"Giant Pinecone",
+				"Spiked Mango",
 			}
 		},
 		Place = {
@@ -73,14 +95,26 @@ getgenv().ConfigsKaitun = {
 			}
 		}
 	},
-	
+
 	["Seed Pack"] = {
 		Locked = {
-			
+
 		}
 	},
-	
+
 	Events = {
+		["Zen Event"] = {
+			["Restocking"] = { -- Minimumthing to restock
+				Max_Restocks_Price = 50_000_000,
+				Minimum_Money = 10_000_000,
+				Minimum_Chi = 180
+			},
+			["Doing"] = {
+				Minimum_Money = 30_000_000, -- minimum money to start play this event
+				First_Upgrade_Tree = 4,
+				Maximum_Chi = 250,
+			}
+		},
 		["Traveling Shop"] = {
 			"Bee Egg",
 			"Night Staff",
@@ -96,13 +130,14 @@ getgenv().ConfigsKaitun = {
 			"Zen Seed Pack",
 			"Spiked Mango",
 			"Pet Shard Tranquil",
+			"Pet Shard Corrupted",
 			"Koi",
-			"Lightning Rod",
+			"Soft Sunshine",
+			"Sakura Bush",
+			"Raiju",
 		},
-		Restocks_limit = 10000000,
-		MinimumChi = 60
 	},
-	
+
 	Gear = {
 		Buy = { 
 			"Master Sprinkler",
@@ -120,9 +155,6 @@ getgenv().ConfigsKaitun = {
 			"Advanced Sprinkler",
 			"Basic Sprinkler",
 			"Lightning Rod",
-			"Level Up Lollipop",
-			"Medium Treat",
-			"Medium Toy",
 		},
 	},
 
@@ -141,25 +173,27 @@ getgenv().ConfigsKaitun = {
 			"Mythical Egg",
 		},
 		Buy = {
-			"Bee Egg",
+			"Zen Egg",
+			"Primal Egg",
+			"Dinosaur Egg",
 			"Oasis Egg",
-			"Paradise Egg",
 			"Anti Bee Egg",
 			"Night Egg",
 			"Legendary Egg",
-			"Rare Summer Egg",
 			"Bug Egg",
+			"Paradise Egg",
+			"Bee Egg",
 			"Mythical Egg",
 		}
 	},
-	
+
 	Pets = {
 		["Start Delete Pet At"] = 40,
 		["Upgrade Slot"] = {
 			["Pet"] = {
-				"Idk"
+				["Starfish"] = { 5, 100, 1 },
 			},
-			["Limit Upgrade"] = 4,
+			["Limit Upgrade"] = 5,
 			["Equip When Done"] = {
 				["Seal"] = { 1, 70, 1 }, -- 1 mean equip only 1 pet , 70 mean equip only level pet lower than 70 the one on the last mean first priority will ues first if possible 
 				["Starfish"] = { 1, 70 },
@@ -186,7 +220,10 @@ getgenv().ConfigsKaitun = {
 				["Blood Owl"] = { 1, 70 },
 			},
 		},
+		Locked_Pet_Age = 60, -- pet that age > 60 will lock
 		Locked = {
+			"Corrupted Kitsune",
+			"Raiju",
 			"Koi",
 			"Tanuki",
 			"Tanchozuru",
@@ -212,7 +249,7 @@ getgenv().ConfigsKaitun = {
 		},
 		LockPet_Weight = 7, -- if Weight >= 10 they will locked,
 		Instant_Sell = {		
-				"Shiba Inu",
+			"Shiba Inu",
 		}
 	},
 
@@ -220,7 +257,7 @@ getgenv().ConfigsKaitun = {
 		UrlPet = "xxx",
 		UrlSeed = "xxx",
 		PcName = "xxx",
-		
+
 		Noti = {
 			Seeds = {
 				"Sunflower",
