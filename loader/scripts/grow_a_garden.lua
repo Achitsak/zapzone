@@ -13,8 +13,8 @@ getgenv().ConfigsKaitun = {
 	
 	["Rejoin When Update"] = false,
 	["Limit Tree"] = {
-		["Limit"] = 150,
-		["Destroy Untill"] = 140,
+		["Limit"] = 50,
+		["Destroy Untill"] = 50,
 
 		["Safe Tree"] = {
 			"Moon Blossom",
@@ -26,7 +26,26 @@ getgenv().ConfigsKaitun = {
 		Buy = {
 			Mode = "Auto", -- Custom , Auto
 			Custom = {
+
+			}
+		},
+		Place = {
+			Mode = "Select", -- Select , Lock
+			Select = {
 				"Carrot",
+ 				"Tomato",
+ 				"Strawberry",
+ 				"Corn",
+ 				"Apple",
+ 				"Coconut",
+ 				"Watermelon",
+ 				"Cactus",
+ 				"Dragon Fruit",
+				"Mango",
+				"Mushroom",
+				"Grape",
+				"Pepper",
+				"Cacao",
 				"Bamboo",
 				"Pumpkin",
 				"Daffodil",
@@ -44,32 +63,8 @@ getgenv().ConfigsKaitun = {
 				"Zen Rocks",
 				"Hinomai",
 				"Beanstalk",
-				"Ember Lily",
-				"Sunflower",
 				"Sugar Apple",
-				"Burning Bud",
-				"Giant Pinecone",
 				"Spiked Mango",
-			}
-		},
-		Place = {
-			Mode = "Select", -- Select , Lock
-			Select = {
- 				"Carrot",
- 				"Tomato",
- 				"Cactus",
-				"Pumpkin",
-				"Watermelon",
-				"Bamboo",
-				"Mango",
-				"Grape",
-				"Pepper",
-				"Apple",
-				"Coconut",
-				"Dragon Fruit",
-				"Spiked Mango",
-				"Taro Flower",
-				"Dragon Sapling",
 			},
 			Lock = {
 				"Sunflower",
