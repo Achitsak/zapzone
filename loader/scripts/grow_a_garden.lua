@@ -102,12 +102,12 @@ getgenv().ConfigsKaitun = {
 			["Restocking"] = { -- Minimumthing to restock
 				Max_Restocks_Price = 50_000_000,
 				Minimum_Money = 10_000_000,
-				Minimum_Chi = 180
+				Minimum_Chi = 50
 			},
 			["Doing"] = {
-				Minimum_Money = 30_000_000, -- minimum money to start play this event
+				Minimum_Money = 1_000_000, -- minimum money to start play this event
 				First_Upgrade_Tree = 4,
-				Maximum_Chi = 250,
+				Maximum_Chi = 50,
 			}
 		},
 		["Traveling Shop"] = {
