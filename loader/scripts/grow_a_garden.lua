@@ -196,6 +196,12 @@ getgenv().ConfigsKaitun = {
 		["Upgrade Slot"] = {
 			["Pet"] = {
 				["Starfish"] = { 5, 100, 1 },
+				["Maneki-neko"] = { 5, 100, 1 },
+				["Ostrich"] = { 2, 100, 1 },
+				["Nihonzaru"] = { 2, 100, 1 },
+				["Tanuki"] = { 2, 100, 1 },
+				["Kodama"] = { 2, 100, 1 },
+				["Squirrel"] = { 2, 100, 1 },
 			},
 			["Limit Upgrade"] = 5,
 			["Equip When Done"] = {
