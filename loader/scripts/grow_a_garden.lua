@@ -13,8 +13,8 @@ getgenv().ConfigsKaitun = {
 	
 	["Rejoin When Update"] = false,
 	["Limit Tree"] = {
-		["Limit"] = 200,
-		["Destroy Untill"] = 180,
+		["Limit"] = 250,
+		["Destroy Untill"] = 240,
 
 		["Safe Tree"] = {
 			"Moon Blossom",
@@ -100,14 +100,14 @@ getgenv().ConfigsKaitun = {
 	Events = {
 		["Zen Event"] = {
 			["Restocking"] = { -- Minimumthing to restock
-				Max_Restocks_Price = 50_000_000,
-				Minimum_Money = 10_000_000,
-				Minimum_Chi = 50
+				Max_Restocks_Price = 10_000_000,
+				Minimum_Money = 1_000_000,
+				Minimum_Chi = 200
 			},
 			["Doing"] = {
 				Minimum_Money = 1_000_000, -- minimum money to start play this event
 				First_Upgrade_Tree = 4,
-				Maximum_Chi = 200,
+				Maximum_Chi = 50,
 			}
 		},
 		["Traveling Shop"] = {
