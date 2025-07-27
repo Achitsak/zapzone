@@ -121,7 +121,7 @@ task.spawn(function()
                     game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
                     _G.is_active = true
                     _G.is_tradeing = true
-                    flexy:refresh(tostring(username), string.format("%s", v))
+                    flexy:refresh(tostring(username), string.format("%s", tostring(target)))
                     if game:GetService("Players").LocalPlayer.PlayerGui.Gift_Notification.Frame:FindFirstChild("Gift_Notification") then
                         interact(game:GetService("Players").LocalPlayer.PlayerGui.Gift_Notification.Frame:FindFirstChild("Gift_Notification").Holder.Frame.Accept)
                     end
