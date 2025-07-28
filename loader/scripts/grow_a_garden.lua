@@ -44,6 +44,7 @@ getgenv().ConfigsKaitun = {
 			Mode = "Select", -- Select , Lock
 			Select = {
 				"Carrot",
+				"Blueberry",
  				"Tomato",
  				"Strawberry",
  				"Corn",
