@@ -5,15 +5,6 @@ repeat task.wait()
     game:GetService("VirtualInputManager"):SendKeyEvent(false, Enum.KeyCode.E, false, game) 
 until game:GetService("Players").LocalPlayer:GetAttribute('DataFullyLoaded')
 
-getgenv().MasterConfig = {
-    ['Main'] = { 
-        ['Zxvdmfw3069'] = 'Dragonfly',
-        ['Kiubyhp4940'] = 'Mimic Octopus',
-        ['Olocuah0501'] = 'Kitsune',
-        ['Lktmmua1688'] = 'Corrupted Kitsune'
-    }
-}
-
 
 print('---------------- Executed ----------------')
 
