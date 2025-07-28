@@ -13,12 +13,23 @@ getgenv().ConfigsKaitun = {
 	
 	["Rejoin When Update"] = false,
 	["Limit Tree"] = {
-		["Limit"] = 250,
-		["Destroy Untill"] = 240,
+		["Limit"] = 300,
+		["Destroy Untill"] = 280,
 
 		["Safe Tree"] = {
 			"Moon Blossom",
 			"Fossilight",
+
+			-- locked fruit for zen event
+			["Tomato"] = 5, ["Strawberry"] = 5, ["Blueberry"] = 5,
+			["Orange Tulip"] = 5, ["Corn"] = 10, ["Daffodil"] = 5,
+			["Bamboo"] = 10, ["Apple"] = 5, ["Coconut"] = 5,
+			["Pumpkin"] = 5, ["Watermelon"] = 5, ["Cactus"] = 5,
+			["Dragon Fruit"] = 5, ["Mango"] = 5, ["Grape"] = 5,
+			["Avocado"] = 2, ["Feijoa"] = 2, ["Cauliflower"] = 2,
+			["Beanstalk"] = 2, ["Green Apple"] = 2, ["Spiked Mango"] = 2,
+			["Firefly Fern"] = 2, ["Soft Sunshine"] = 2, ["Sugar Apple"] = 2,
+			["Mushroom"] = 10, ["Pepper"] = 5, ["Cacao"] = 5
 		}
 	},
 
@@ -106,8 +117,8 @@ getgenv().ConfigsKaitun = {
 			},
 			["Doing"] = {
 				Minimum_Money = 1_000_000, -- minimum money to start play this event
-				First_Upgrade_Tree = 4,
-				Maximum_Chi = 50,
+				First_Upgrade_Tree = 7,
+				Maximum_Chi = 20,
 			}
 		},
 		["Traveling Shop"] = {
@@ -155,10 +166,22 @@ getgenv().ConfigsKaitun = {
 			"Lightning Rod",
 		},
 		Lock = {
+			"Watering Can",
+			"Trowel",
+			"Recall Wrench",
+			"Magnifying Glass",
+			"Tanning Mirror",
+			"Cleaning Spray",
+			"Favorite Tool",
+			"Harvest Tool",
+			"Friendship Pot",
 			"Master Sprinkler",
+			"Basic Sprinkler",
 			"Godly Sprinkler",
 			"Advanced Sprinkler",
-			"Basic Sprinkler",
+			"Medium Toy",
+			"Medium Treat",
+			"Levelup Lollipop",
 			"Lightning Rod",
 		},
 	},
@@ -197,17 +220,14 @@ getgenv().ConfigsKaitun = {
 		["Upgrade Slot"] = {
 			["Pet"] = {
 				["Starfish"] = { 5, 100, 1 },
-				["Maneki-neko"] = { 5, 100, 1 },
-				["Ostrich"] = { 2, 100, 1 },
 				["Nihonzaru"] = { 2, 100, 1 },
 				["Tanuki"] = { 2, 100, 1 },
-				["Kodama"] = { 2, 100, 1 },
 				["Squirrel"] = { 2, 100, 1 },
 			},
 			["Limit Upgrade"] = 5,
 			["Equip When Done"] = {
-				["Blood Kiwi"] = { 8, 100, 3 },
-				["Rooster"] = { 5, 100, 4 },
+				["Tanuki"] = { 8, 100, 3 },
+				["Starfish"] = { 5, 100, 4 },
 				["Tanchozuru"] = { 8, 100, 5 },
 				["Kodama"] = { 2, 100, 1 },
 				["Corrupted Kodama"] = { 2, 100, 2 },
