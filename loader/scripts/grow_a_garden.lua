@@ -93,7 +93,7 @@ getgenv().ConfigsKaitun = {
 				"Loquat",
 				"Fossilight",
 				"Maple Apple",
-				"Hinomai",
+				"Elder Strawberry",
 				"Fossilight",
 				"Zen Rocks",
 				"Giant Pinecone",
