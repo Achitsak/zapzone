@@ -6,7 +6,7 @@ getgenv().MasterConfig = {
         ["Dragonfly"] = { "Deedlmk0791" },
         ["Mimic Octopus"] = { "Txhqjei3775" },
         ["Kitsune"] = { "Fldueoi2557" },
-        ["Corrupted Kitsune"] = { "Pinfoct6705" , "Ikbiouv3598", "Pioxzna0490", "Zebrzae8597" , "ZoffineDdite" },
+        ["Corrupted Kitsune"] = { "Pinfoct6705" , "Ikbiouv3598", "Pioxzna0490", "Zebrzae8597" },
         ["Corrupted Kodama"] = { "Abgzdcg7849" , "Yhkxqmh3012", "Dkbyfdg4164" }
     }
 }
