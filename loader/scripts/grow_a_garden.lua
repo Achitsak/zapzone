@@ -119,7 +119,7 @@ getgenv().ConfigsKaitun = {
 			["Doing"] = {
 				Minimum_Money = 1_000_000, -- minimum money to start play this event
 				First_Upgrade_Tree = 7,
-				Maximum_Chi = 20,
+				Maximum_Chi = 200,
 			}
 		},
 		["Traveling Shop"] = {
