@@ -167,6 +167,7 @@ getgenv().ConfigsKaitun = {
 			"Level Up Lollipop",
 			"Medium Treat",
 			"Medium Toy",
+			"Grandmaster Sprinkler",	
 		},
 		Lock = {
 			"Master Sprinkler",
@@ -174,6 +175,10 @@ getgenv().ConfigsKaitun = {
 			"Advanced Sprinkler",
 			"Basic Sprinkler",
 			"Lightning Rod",
+			"Level Up Lollipop",
+			"Medium Treat",
+			"Medium Toy",
+			"Grandmaster Sprinkler",	
 		},
 	},
 
