@@ -229,6 +229,9 @@ getgenv().ConfigsKaitun = {
 				["Nihonzaru"] = { 2, 100, 1, true },
 				["Tanuki"] = { 2, 100, 1, true },
 				["Squirrel"] = { 2, 100, 1, true },
+				["Bagel Bunny"] = { 2, 100, 1, true },
+				["Pancake Mole"] = { 2, 100, 1, true },
+				["Sushi Bear"] = { 2, 100, 1, true },
 			},
 			["Limit Upgrade"] = 5,
 			["Equip When Done"] = {
