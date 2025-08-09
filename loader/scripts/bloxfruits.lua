@@ -98,6 +98,6 @@ _G.Hop_Settings = {
     ["Find Tushita"] = false
 }
 
-getgenv().Key = "MARU-VO2N5-9LRH-6RFL-D0DCZ-8H4RP"
+getgenv().Key = "MXXX"
 getgenv().id = "759079095438278687"
 loadstring(game:HttpGet("https://raw.githubusercontent.com/xshiba/MasterPClient/main/Private.lua"))()
