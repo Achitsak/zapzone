@@ -6,7 +6,7 @@ until game:GetService("Players").LocalPlayer:GetAttribute('DataFullyLoaded') == 
 print('this is loadstring for grow a garden')
 
 getgenv().ConfigsKaitun = {
-	Beta_Fix_Data_Sync = true,
+	Beta_Fix_Data_Sync = false,
 
 	NoDeletePlayer = false,
   
@@ -20,8 +20,8 @@ getgenv().ConfigsKaitun = {
 	
 	["Rejoin When Update"] = false,
 	["Limit Tree"] = {
-		["Limit"] = 300,
-		["Destroy Untill"] = 280,
+		["Limit"] = 120,
+		["Destroy Untill"] = 100,
 
 		["Safe Tree"] = {
 			"Tranquil Bloom",
