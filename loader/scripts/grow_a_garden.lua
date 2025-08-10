@@ -33,7 +33,7 @@ getgenv().ConfigsKaitun = {
 			"Moon Mango",
 			"Bone Blossom",
 			"Fossilight",
-      			"Serenity",
+      		"Serenity",
       
 			-- locked fruit for zen event
 			["Tomato"] = 5, ["Strawberry"] = 5, ["Blueberry"] = 5,
@@ -47,7 +47,7 @@ getgenv().ConfigsKaitun = {
 
 	Seed = {
 		Buy = {
-			Mode = "Custom", -- Custom , Auto
+			Mode = "Auto", -- Custom , Auto
 			Custom = {
 				"Tomato",
 				"Strawberry",
@@ -59,12 +59,6 @@ getgenv().ConfigsKaitun = {
 				"Mushroom",
 				"Pepper",
 				"Cacao",
-				"Beanstalk",
-				"Ember Lily",
-				"Sugar Apple",
-				"Burning Bud",
-				"Giant Pinecone",
-				"Elder Strawberry",
 			}
 		},
 		Place = {
@@ -79,6 +73,19 @@ getgenv().ConfigsKaitun = {
 				"Moon Melon",
 				"Moon Mango",
 				"Fossilight",
+				"Beanstalk",
+				"Ember Lily",
+				"Sugar Apple",
+				"Burning Bud",
+				"Giant Pinecone",
+				"Elder Strawberry",
+				"Bitter Melon",
+				"King Cabbage",
+				"Grand Tomato",
+				"Tall Asparagus",
+				"Taco Fern",
+				"Sugarglaze",
+
 			}
 		}
 	},
@@ -219,8 +226,10 @@ getgenv().ConfigsKaitun = {
 		Locked_Pet_Age = 60, -- pet that age > 60 will lock
 		Locked = {
 			"French Fry Ferret",
-      			"Spaghetti Sloth",
-      			"Sushi Bear",
+			"Lobster Thermidor",
+			"Hotdog Daschund",
+      		"Spaghetti Sloth",
+      		"Sushi Bear",
 			"Corrupted Kitsune",
 			"Corrupted Kodama",
 			"Kitsune",
