@@ -14,7 +14,7 @@ getgenv().ConfigsKaitun = {
 
 	Collect_Cooldown = 120, -- cooldown to collect fruit
 
-	["Low Cpu"] = false,
+	["Low Cpu"] = true,
 	["Auto Rejoin"] = false,
 
 	["Rejoin When Update"] = false,
