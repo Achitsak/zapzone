@@ -14,7 +14,7 @@ getgenv().ConfigsKaitun = {
 
 	Collect_Cooldown = 120, -- cooldown to collect fruit
 
-	["Low Cpu"] = true,
+	["Low Cpu"] = false,
 	["Auto Rejoin"] = true,
 
 	["Rejoin When Update"] = false,
@@ -33,7 +33,7 @@ getgenv().ConfigsKaitun = {
 			"Moon Mango",
 			"Bone Blossom",
 			"Fossilight",
-      			"Serenity",
+      		"Serenity",
       
 			-- locked fruit for zen event
 			["Tomato"] = 5, ["Strawberry"] = 5, ["Blueberry"] = 5,
@@ -47,7 +47,7 @@ getgenv().ConfigsKaitun = {
 
 	Seed = {
 		Buy = {
-			Mode = "Custom", -- Custom , Auto
+			Mode = "Auto", -- Custom , Auto
 			Custom = {
 				"Tomato",
 				"Strawberry",
@@ -59,12 +59,6 @@ getgenv().ConfigsKaitun = {
 				"Mushroom",
 				"Pepper",
 				"Cacao",
-				"Beanstalk",
-				"Ember Lily",
-				"Sugar Apple",
-				"Burning Bud",
-				"Giant Pinecone",
-				"Elder Strawberry",
 			}
 		},
 		Place = {
@@ -79,6 +73,19 @@ getgenv().ConfigsKaitun = {
 				"Moon Melon",
 				"Moon Mango",
 				"Fossilight",
+				"Beanstalk",
+				"Ember Lily",
+				"Sugar Apple",
+				"Burning Bud",
+				"Giant Pinecone",
+				"Elder Strawberry",
+				"Bitter Melon",
+				"King Cabbage",
+				"Grand Tomato",
+				"Tall Asparagus",
+				"Taco Fern",
+				"Sugarglaze",
+
 			}
 		}
 	},
@@ -146,10 +153,23 @@ getgenv().ConfigsKaitun = {
 			"Lightning Rod",
 		},
 		Lock = {
+			"Watering Can",
+			"Trowel",
+			"Recall Wrench",
+			"Magnifying Glass",
+			"Tanning Mirror",
+			"Cleaning Spray",
+			"Favorite Tool",
+			"Harvest Tool",
+			"Friendship Pot",
 			"Master Sprinkler",
+			"Basic Sprinkler",
 			"Godly Sprinkler",
 			"Advanced Sprinkler",
-			"Basic Sprinkler",
+			"Levelup Lollipop",
+			"Medium Toy",
+			"Medium Treat",
+			"Grandmaster Sprinkler",
 			"Lightning Rod",
 		},
 	},
@@ -168,7 +188,6 @@ getgenv().ConfigsKaitun = {
 			"Bee Egg",
 			"Rare Summer Egg",
 			"Mythical Egg",
-			"Common Egg",
 		},
 		Buy = {
 			"Bee Egg",
@@ -179,7 +198,6 @@ getgenv().ConfigsKaitun = {
 			"Rare Summer Egg",
 			"Bug Egg",
 			"Mythical Egg",
-			"Common Egg",
 		}
 	},
 
@@ -218,8 +236,10 @@ getgenv().ConfigsKaitun = {
 		Locked_Pet_Age = 60, -- pet that age > 60 will lock
 		Locked = {
 			"French Fry Ferret",
-      			"Spaghetti Sloth",
-      			"Sushi Bear",
+			"Lobster Thermidor",
+			"Hotdog Daschund",
+      		"Spaghetti Sloth",
+      		"Sushi Bear",
 			"Corrupted Kitsune",
 			"Corrupted Kodama",
 			"Kitsune",
@@ -277,7 +297,8 @@ getgenv().ConfigsKaitun = {
 }
 
 License = "Oz1dvloGjrT1VmXiziOkSk3cXlLsMvWP"
-loadstring(game:HttpGet("https://api.realaya.xyz/v1/files/l/98vt13x1h979yxngcvxbkjsq8hsw9rpw.lua"))()
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Real-Aya/Loader/main/Init.lua'))()
 
 task.spawn(function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/Achitsak/zapzone/main/loader/scripts/extension/webhook.lua"))()
