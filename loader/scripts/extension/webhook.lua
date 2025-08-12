@@ -68,7 +68,7 @@ local function checkAndSend()
 									playerName, petType, weight, level
 								)
 							)
-						elseif (weight > 7 and level <= 10) or (weight > 10 and level <= 39) then
+						elseif (weight > 7 and level <= 1) or (weight > 10 and level <= 39) then
 							sendDiscordEmbed(
 								"🐾 สัตว์เข้าเงื่อนไข",
 								string.format(
