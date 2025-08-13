@@ -10,7 +10,6 @@ end
 
 local gameId = game.GameId
 
-
 if gameId == 7436755782 then -- grow a garden
 
     getgenv().Hermanos_Settings = {
