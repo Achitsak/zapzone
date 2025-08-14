@@ -79,6 +79,8 @@ getgenv().ConfigsKaitun = {
 				"Burning Bud",
 				"Giant Pinecone",
 				"Elder Strawberry",
+				"Grand Tomato",
+				"King Cabbage",
 				"Bitter Melon",
 				"King Cabbage",
 				"Grand Tomato",
