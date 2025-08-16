@@ -31,15 +31,6 @@ getgenv().ConfigsKaitun = {
 			"Moon Mango",
 			"Bone Blossom",
 			"Fossilight",
-      		"Serenity",
-      
-			-- locked fruit for zen event
-			["Tomato"] = 5, ["Strawberry"] = 5, ["Blueberry"] = 5,
-			["Orange Tulip"] = 5, ["Corn"] = 5, ["Daffodil"] = 5,
-			["Bamboo"] = 5, ["Apple"] = 5, ["Coconut"] = 5,
-			["Pumpkin"] = 5, ["Watermelon"] = 5, ["Cactus"] = 5,
-			["Dragon Fruit"] = 5, ["Mango"] = 5, ["Grape"] = 5,
-			["Mushroom"] = 5, ["Pepper"] = 5, ["Cacao"] = 3
 		}
 	},
 
@@ -47,22 +38,37 @@ getgenv().ConfigsKaitun = {
 		Buy = {
 			Mode = "Auto", -- Custom , Auto
 			Custom = {
-				"Tomato",
-				"Strawberry",
-				"Bell Pepper",
-				"Blood Banana",
-				"Onion",
-				"Pear",
-				"Grape",
-				"Mushroom",
-				"Pepper",
-				"Cacao",
+
 			}
 		},
 		Place = {
 			Mode = "Lock", -- Select , Lock
 			Select = {
-				"Carrot"
+				"Sunflower",
+				"Dragon Pepper",
+				"Elephant Ears",
+				"Moon Melon",
+				"Moon Mango",
+				"Fossilight",
+				"Beanstalk",
+				"Ember Lily",
+				"Sugar Apple",
+				"Burning Bud",
+				"Giant Pinecone",
+				"Elder Strawberry",
+				"Grand Tomato",
+				"King Cabbage",
+				"Bitter Melon",
+				"King Cabbage",
+				"Grand Tomato",
+				"Tall Asparagus",
+				"Taco Fern",
+				"Sugarglaze",
+				"Romanesco",
+				"Poseidon Plant",
+				"Gleamroot",
+				"Princess Thorn",
+				"Amberheart",
 			},
 			Lock = {
 				"Sunflower",
@@ -85,6 +91,11 @@ getgenv().ConfigsKaitun = {
 				"Tall Asparagus",
 				"Taco Fern",
 				"Sugarglaze",
+				"Romanesco",
+				"Poseidon Plant",
+				"Gleamroot",
+				"Princess Thorn",
+				"Amberheart",
 
 			}
 		}
