@@ -12,9 +12,9 @@ _G.Settings_Farm = {
     ["Disabled_Gui"] = true,
 }
 _G.Quests_Settings = {
-     ["V2Observation"] = true,
-     ["V2Aramament"] = true,
-     ["V2DarkLeg"] = true,
+     ["V2Observation"] = false,
+     ["V2Aramament"] = false,
+     ["V2DarkLeg"] = false,
      ["FarmRaid"] = true
 }
 getgenv().Key = "MARU-VO2N5-9LRH-6RFL-D0DCZ-8H4RP"
