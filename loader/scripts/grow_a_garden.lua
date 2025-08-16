@@ -3,24 +3,22 @@ repeat task.wait()
     game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.E, false, game) 
     game:GetService("VirtualInputManager"):SendKeyEvent(false, Enum.KeyCode.E, false, game) 
 until game:GetService("Players").LocalPlayer:GetAttribute('DataFullyLoaded') == true
-print('this is loadstring for grow a garden')
-
 getgenv().ConfigsKaitun = {
 	Beta_Fix_Data_Sync = true,
 
 	NoDeletePlayer = false,
 
-	["Block Pet Gift"] = false,
+	["Block Pet Gift"] = true,
 
 	Collect_Cooldown = 120, -- cooldown to collect fruit
 
 	["Low Cpu"] = true,
-	["Auto Rejoin"] = false,
+	["Auto Rejoin"] = true,
 
 	["Rejoin When Update"] = false,
 	["Limit Tree"] = {
-		["Limit"] = 150,
-		["Destroy Until"] = 120,
+		["Limit"] = 200,
+		["Destroy Until"] = 180,
 
 		["Safe Tree"] = {
 			"Tranquil Bloom",
@@ -99,36 +97,24 @@ getgenv().ConfigsKaitun = {
 	},
 
 	Events = {
-		["Cook Event"] = {
+	Events = {
+		["Bean Event"] = {
 			Minimum_Money = 1_000_000, -- minimum money to start play this event
-			Rewards_Item = { -- The top is the most top mean prefered.
-				"Gorilla Chef",
-				"Gourmet Egg",
-				"Culinarian Chest",
-				"Gourmet Seed Pack",
-				"Sunny-Side Chicken",
-				-- u can add it more as u want, if it not in list.
-			}
+		},
+		Shop = { -- un comment to buy
+			"Sprout Seed Pack",
+			"Sprout Egg",
+			-- "Mandrake",
+			"Silver Fertilizer",
+			-- "Canary Melon",
+			-- "Amberheart",
+			"Spriggan",
 		},
 		["Traveling Shop"] = {
 			"Bee Egg",
 		},
 		Craft = {
 			"Anti Bee Egg",
-			"Small Toy",
-			"Small Treat",
-			"Ancient Seed Pack",
-		},
-		Shop = {
-      		"Gourmet Egg",
-			"Gourmet Seed Pack",
-			"Zen Egg",
-			"Zenflare",
-			"Zen Seed Pack",
-     		"Pet Shard Corrupted",
-			"Pet Shard Tranquil",
-			"Koi",
-			"Raiju",
 		},
 		Start_Do_Honey = 1_000_000 -- start trade fruit for honey at money
 	},
@@ -178,6 +164,7 @@ getgenv().ConfigsKaitun = {
 
 	Eggs = {
 		Place = {
+			"Sprout Egg",
 			"Dinosaur Egg",
 			"Gourmet Egg",
 			"Zen Egg",
@@ -189,16 +176,23 @@ getgenv().ConfigsKaitun = {
 			"Paradise Egg",
 			"Bee Egg",
 			"Rare Summer Egg",
+			"Common Egg",
 			"Mythical Egg",
 		},
 		Buy = {
-			"Bee Egg",
+			"Sprout Egg",
+			"Dinosaur Egg",
+			"Gourmet Egg",
+			"Zen Egg",
+			"Primal Egg",
 			"Oasis Egg",
-			"Paradise Egg",
 			"Anti Bee Egg",
 			"Night Egg",
-			"Rare Summer Egg",
 			"Bug Egg",
+			"Paradise Egg",
+			"Bee Egg",
+			"Common Egg",
+			"Rare Summer Egg",
 			"Mythical Egg",
 		}
 	},
@@ -230,12 +224,19 @@ getgenv().ConfigsKaitun = {
 			},
 			["Limit Upgrade"] = 5, -- max is 5 (more than or lower than 1 will do nothing)
 			["Equip When Done"] = {
-				["Gorilla Chef"] = { 8, 75, 1, true  },
+				["Tanchozuru"] = { 5, 100, 1 }, -- 5 on the first mean equip only 5 | pet , 100 mean equip only level pet lower than 100 | the one on the last is priority it will ues first if possible 
+				["Ostrich"] = { 3, 100, 2 },
+				["Blood Kiwi"] = { 8, 100 },
+				["Seal"] = { 8, 100 },
+				["Rooster"] = { 8, 100 },
+				["Starfish"] = { 5, 75 },
 			},
 		},
 		Favorite_LockedPet = true,
 		Locked_Pet_Age = 60, -- pet that age > 60 will lock
 		Locked = {
+			"Golden Goose",
+			"Golem",
 			"French Fry Ferret",
 			"Lobster Thermidor",
 			"Hotdog Daschund",
