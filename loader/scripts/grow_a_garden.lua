@@ -37,8 +37,8 @@ getgenv().ConfigsKaitun = {
 	Seed = {
 		Buy = {
 			Mode = "Auto", -- Custom , Auto
-			Custom = {
-
+			Custom = { -- any fruit u need to place
+				"Carrot",
 			}
 		},
 		Place = {
@@ -96,7 +96,6 @@ getgenv().ConfigsKaitun = {
 				"Gleamroot",
 				"Princess Thorn",
 				"Amberheart",
-
 			}
 		}
 	},
@@ -108,10 +107,10 @@ getgenv().ConfigsKaitun = {
 	},
 
 	Events = {
-	Events = {
 		["Bean Event"] = {
 			Minimum_Money = 1_000_000, -- minimum money to start play this event
 		},
+		MaxMoney_Restocks = 50_000_000,
 		Shop = { -- un comment to buy
 			"Sprout Seed Pack",
 			"Sprout Egg",
@@ -119,7 +118,7 @@ getgenv().ConfigsKaitun = {
 			"Silver Fertilizer",
 			-- "Canary Melon",
 			-- "Amberheart",
-			"Spriggan",
+			["Spriggan"] = 8,
 		},
 		["Traveling Shop"] = {
 			"Bee Egg",
@@ -202,8 +201,8 @@ getgenv().ConfigsKaitun = {
 			"Bug Egg",
 			"Paradise Egg",
 			"Bee Egg",
-			"Common Egg",
 			"Rare Summer Egg",
+			"Common Egg",
 			"Mythical Egg",
 		}
 	},
@@ -243,42 +242,54 @@ getgenv().ConfigsKaitun = {
 				["Starfish"] = { 5, 75 },
 			},
 		},
-		Favorite_LockedPet = true,
+		Unfavorite_AllPet = false,
+		Favorite_LockedPet = false,
 		Locked_Pet_Age = 60, -- pet that age > 60 will lock
 		Locked = {
 			"Golden Goose",
 			"Golem",
 			"French Fry Ferret",
-			"Lobster Thermidor",
-			"Hotdog Daschund",
-      		"Spaghetti Sloth",
-      		"Sushi Bear",
+			"Spaghetti Sloth",
 			"Corrupted Kitsune",
-			"Corrupted Kodama",
-			"Kitsune",
-			"Kappa",
+			"Raiju",
+			"Koi",
+			"Tanuki",
 			"Tanchozuru",
+			"Kappa",
+			"Kitsune",
+			"Dilophosaurus",
+			"Moon Cat",
+			"Capybara",
+			"Spinosaurus",
+			"Bear Bee",
+			"T-Rex",
+			"Brontosaurus",
 			"Disco Bee",
 			"Butterfly",
 			"Queen Bee",
 			"Dragonfly",
 			"Raccoon",
-			"Red Fox",
+			"Fennec Fox",
 			"Mimic Octopus",
-			"Brontosaurus",
-			"Dilophosaurus",
-			"Ankylosaurus",
-			"Spinosaurus",
-			"T-Rex",
-			["Capybara"] = 5,
+			"Red Fox",
+			"Blood Owl",
+			["Starfish"] = 10,
 		},
 		LockPet_Weight = 7, -- if Weight >= 10 they will locked
+		Ignore_Pet_Weight = {
+			"NAME oF PET THAT U DONT NEED LOCK",
+		},
+		Instant_Sell = {
+			"NAME oF SOMETHING",
+		}
 	},
 
 	Webhook = {
 		UrlPet = "xxx",
 		UrlSeed = "xxx",
 		PcName = "xxx",
+
+		Mention = "", -- discord id
 
 		Noti = {
 			Seeds = {
@@ -290,6 +301,7 @@ getgenv().ConfigsKaitun = {
 				"Idk"
 			},
 			Pets = {
+				"Golden Goose",
 				"French Fry Ferret",
 				"Corrupted Kitsune",
 				"Kitsune",
