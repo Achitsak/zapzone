@@ -125,6 +125,7 @@ getgenv().ConfigsKaitun = {
 		},
 		Craft = {
 			"Anti Bee Egg",
+			"Pet Pouch",
 		},
 		Start_Do_Honey = 1_000_000 -- start trade fruit for honey at money
 	},
