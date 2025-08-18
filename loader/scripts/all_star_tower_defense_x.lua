@@ -15,7 +15,7 @@ _G.Quests_Settings = {
      ["V2Observation"] = true,
      ["V2Aramament"] = true,
      ["V2DarkLeg"] = true,
-     ["FarmRaid"] = false
+     ["FarmRaid"] = true
 }
 getgenv().Key = "MARU-VO2N5-9LRH-6RFL-D0DCZ-8H4RP"
 getgenv().id = "759079095438278687"
