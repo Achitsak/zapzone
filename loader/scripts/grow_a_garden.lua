@@ -8,7 +8,7 @@ getgenv().ConfigsKaitun = {
 
 	NoDeletePlayer = false,
 
-	["Block Pet Gift"] = true,
+	["Block Pet Gift"] = false,
 
 	Collect_Cooldown = 120, -- cooldown to collect fruit
 
@@ -17,20 +17,28 @@ getgenv().ConfigsKaitun = {
 
 	["Rejoin When Update"] = false,
 	["Limit Tree"] = {
-		["Limit"] = 200,
-		["Destroy Until"] = 180,
+		["Limit"] = 300,
+		["Destroy Until"] = 250,
 
 		["Safe Tree"] = {
-			"Tranquil Bloom",
-			"Maple Apple",
-			"Sunflower",
-			"Dragon Pepper",
-			"Elephant Ears",
-			"Moon Melon",
-			"Easter Egg",
-			"Moon Mango",
-			"Bone Blossom",
-			"Fossilight",
+            "Moon Blossom",
+            "Bone Blossom",
+            "Moon Melon",
+            "Maple Apple",
+            "Moon Mango",
+            "Dragon Pepper",
+            "Elephant Ears",
+            "Fossilight",
+            "Princess Thorn",
+			-- for the event
+            ["Blueberry"] = 15,
+            ["Strawberry"] = 15,
+            ["Apple"] = 15,
+            ["Coconut"] = 15,
+            ["Dragon Fruit"] = 15,
+            ["Mango"] = 15,
+            ["Tomato"] = 20,
+            ["Cactus"] = 15,
 		}
 	},
 
@@ -110,7 +118,7 @@ getgenv().ConfigsKaitun = {
 		["Bean Event"] = {
 			Minimum_Money = 1_000_000, -- minimum money to start play this event
 		},
-		MaxMoney_Restocks = 50_000_000,
+		MaxMoney_Restocks = 1_000_000,
 		Shop = { -- un comment to buy
 			"Sprout Seed Pack",
 			"Sprout Egg",
@@ -119,13 +127,17 @@ getgenv().ConfigsKaitun = {
 			-- "Canary Melon",
 			-- "Amberheart",
 			["Spriggan"] = 8,
+			-- Friend Shop
+			"Skyroot Chest",
+			"Pet Shard GiantBean",
 		},
 		["Traveling Shop"] = {
 			"Bee Egg",
 		},
 		Craft = {
 			"Anti Bee Egg",
-			"Pet Pouch",
+			"Pet Shard GiantBean",
+			"Sprout Egg",
 		},
 		Start_Do_Honey = 1_000_000 -- start trade fruit for honey at money
 	},
@@ -191,24 +203,22 @@ getgenv().ConfigsKaitun = {
 			"Mythical Egg",
 		},
 		Buy = {
-			"Sprout Egg",
-			"Dinosaur Egg",
-			"Gourmet Egg",
-			"Zen Egg",
-			"Primal Egg",
+			"Bee Egg",
 			"Oasis Egg",
+			"Paradise Egg",
 			"Anti Bee Egg",
 			"Night Egg",
-			"Bug Egg",
-			"Paradise Egg",
-			"Bee Egg",
 			"Rare Summer Egg",
-			"Common Egg",
+			"Bug Egg",
 			"Mythical Egg",
+			"Uncommon Egg",
+			"Common Egg",
 		}
 	},
 
 	Pets = {
+		["Auto Feed"] = true,
+
 		["Start Delete Pet At"] = 40,
 		["Upgrade Slot"] = {
 			["Pet"] = {
@@ -243,10 +253,11 @@ getgenv().ConfigsKaitun = {
 				["Starfish"] = { 5, 75 },
 			},
 		},
-		Unfavorite_AllPet = false,
+		Unfavorite_AllPet = true,
 		Favorite_LockedPet = false,
 		Locked_Pet_Age = 60, -- pet that age > 60 will lock
 		Locked = {
+			"Griffin",
 			"Golden Goose",
 			"Golem",
 			"French Fry Ferret",
