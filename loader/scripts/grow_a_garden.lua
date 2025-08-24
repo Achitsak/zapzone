@@ -13,12 +13,12 @@ getgenv().ConfigsKaitun = {
 	Collect_Cooldown = 120, -- cooldown to collect fruit
 
 	["Low Cpu"] = true,
-	["Auto Rejoin"] = true,
+	["Auto Rejoin"] = false,
 
 	["Rejoin When Update"] = false,
 	["Limit Tree"] = {
-		["Limit"] = 300,
-		["Destroy Until"] = 250,
+		["Limit"] = 200,
+		["Destroy Until"] = 180,
 
 		["Safe Tree"] = {
             "Moon Blossom",
@@ -31,14 +31,14 @@ getgenv().ConfigsKaitun = {
             "Fossilight",
             "Princess Thorn",
 			-- for the event
-            ["Blueberry"] = 15,
-            ["Strawberry"] = 15,
-            ["Apple"] = 15,
-            ["Coconut"] = 15,
-            ["Dragon Fruit"] = 15,
-            ["Mango"] = 15,
+            ["Blueberry"] = 8,
+            ["Strawberry"] = 8,
+            ["Apple"] = 8,
+            ["Coconut"] = 8,
+            ["Dragon Fruit"] = 8,
+            ["Mango"] = 8,
             ["Tomato"] = 20,
-            ["Cactus"] = 15,
+            ["Cactus"] = 8,
 		}
 	},
 
@@ -52,39 +52,9 @@ getgenv().ConfigsKaitun = {
 		Place = {
 			Mode = "Lock", -- Select , Lock
 			Select = {
-				"Sunflower",
-				"Dragon Pepper",
-				"Elephant Ears",
-				"Moon Melon",
-				"Moon Mango",
-				"Fossilight",
-				"Beanstalk",
-				"Ember Lily",
-				"Sugar Apple",
-				"Burning Bud",
-				"Giant Pinecone",
-				"Elder Strawberry",
-				"Grand Tomato",
-				"King Cabbage",
-				"Bitter Melon",
-				"King Cabbage",
-				"Grand Tomato",
-				"Tall Asparagus",
-				"Cyclamen",
-				"Sugarglaze",
-				"Romanesco",
-				"Poseidon Plant",
-				"Gleamroot",
-				"Princess Thorn",
-				"Amberheart",
+				"Carrot"
 			},
 			Lock = {
-				"Sunflower",
-				"Dragon Pepper",
-				"Elephant Ears",
-				"Moon Melon",
-				"Moon Mango",
-				"Fossilight",
 				"Beanstalk",
 				"Ember Lily",
 				"Sugar Apple",
@@ -150,7 +120,7 @@ getgenv().ConfigsKaitun = {
 			"Pet Shard GiantBean",
 			"Sprout Egg",
 		},
-		Start_Do_Honey = 1_000_000 -- start trade fruit for honey at money
+		Start_Do_Honey = 2_000_000 -- start trade fruit for honey at money
 	},
 
 	Gear = {
@@ -180,11 +150,6 @@ getgenv().ConfigsKaitun = {
 			"Mega Lollipop",
 			"Gold Lollipop",
 			"Silver Lollipop",
-			"Pet Mutation Shard Mega",
-			"Pet Mutation Shard Rainbow",
-			"Pet Mutation Shard Gold",
-			"Pet Mutation Shard Silver",
-			"Pet Mutation Shard Giantbean",
 		},
 		Lock = {
 			"Watering Can",
@@ -222,10 +187,10 @@ getgenv().ConfigsKaitun = {
 
 	Eggs = {
 		Place = {
-			"Dinosaur Egg",
 			"Gourmet Egg",
 			"Zen Egg",
 			"Primal Egg",
+			"Dinosaur Egg",
 			"Oasis Egg",
 			"Anti Bee Egg",
 			"Night Egg",
@@ -233,8 +198,9 @@ getgenv().ConfigsKaitun = {
 			"Paradise Egg",
 			"Bee Egg",
 			"Rare Summer Egg",
-			"Common Egg",
 			"Mythical Egg",
+			"Uncommon Egg",
+			"Common Egg",
 		},
 		Buy = {
 			"Bee Egg",
@@ -256,7 +222,7 @@ getgenv().ConfigsKaitun = {
 		["Start Delete Pet At"] = 40,
 		["Upgrade Slot"] = {
 			["Pet"] = {
-				["Starfish"] = { 8, 100, 1, true  },
+				["Starfish"] = { 5, 100, 1, true }, -- the "true" on the last is auto equip (use for like only need to use for upgrade pet)
 				["Golden Lab"] = { 8, 100, 1, true  },
 				["Bee"] = { 8, 100, 1, true  },
 				["Bunny"] = { 8, 100, 1, true  },
