@@ -106,11 +106,6 @@ getgenv().ConfigsKaitun = {
 			"Mega Lollipop",
 			"Gold Lollipop",
 			"Silver Lollipop",
-			"Pet Mutation Shard Mega",
-			"Pet Mutation Shard Rainbow",
-			"Pet Mutation Shard Gold",
-			"Pet Mutation Shard Silver",
-			"Pet Mutation Shard Giantbean",
 		},
 		["Traveling Shop"] = {
 			"Bee Egg",
