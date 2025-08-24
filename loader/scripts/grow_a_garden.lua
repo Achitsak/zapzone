@@ -192,25 +192,6 @@ getgenv().ConfigsKaitun = {
 		["Upgrade Slot"] = {
 			["Pet"] = {
 				["Starfish"] = { 5, 100, 1, true }, -- the "true" on the last is auto equip (use for like only need to use for upgrade pet)
-				["Golden Lab"] = { 8, 100, 1, true  },
-				["Bee"] = { 8, 100, 1, true  },
-				["Bunny"] = { 8, 100, 1, true  },
-				["Golden Lab"] = { 8, 100, 1, true  },
-				["Pancake Mole"] = { 8, 100, 1, true  },
-				["Bagel Bunny"] = { 8, 100, 1, true  },
-				["Tanuki"] = { 8, 100, 1, true  },
-				["Kodama"] = { 8, 100, 1, true  },
-				["Raiju"] = { 8, 100, 1, true  },
-				["Maneki-neko"] = { 8, 100, 1, true  },
-				["Seagull"] = { 8, 100, 1, true  },
-				["Shiba Inu"] = { 8, 100, 1, true  },
-				["Nihonzaru"] = { 8, 100, 1, true  },
-				["Stegosaurus"] = { 8, 100, 1, true  },
-				["Peacock"] = { 8, 100, 1, true  },
-				["Triceratops"] = { 8, 100, 1, true  },
-				["Pterodactyl"] = { 8, 100, 1, true  },
-				["Toucan"] = { 8, 100, 1, true  },
-				["Bunny"] = { 8, 100, 1, true  },
 			},
 			["Limit Upgrade"] = 5, -- max is 5 (more than or lower than 1 will do nothing)
 			["Equip When Done"] = {
@@ -222,7 +203,6 @@ getgenv().ConfigsKaitun = {
 				["Starfish"] = { 5, 75 },
 			},
 		},
-		Unfavorite_AllPet = true,
 		Favorite_LockedPet = false,
 		Locked_Pet_Age = 60, -- pet that age > 60 will lock
 		Locked = {
