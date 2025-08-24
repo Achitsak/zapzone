@@ -10,15 +10,15 @@ getgenv().ConfigsKaitun = {
 
 	["Block Pet Gift"] = false,
 
-	Collect_Cooldown = 120, -- cooldown to collect fruit
+	Collect_Cooldown = 60, -- cooldown to collect fruit
 
 	["Low Cpu"] = true,
 	["Auto Rejoin"] = false,
 
 	["Rejoin When Update"] = false,
 	["Limit Tree"] = {
-		["Limit"] = 200,
-		["Destroy Until"] = 180,
+		["Limit"] = 150,
+		["Destroy Until"] = 150,
 
 		["Safe Tree"] = {
             "Moon Blossom",
@@ -100,10 +100,6 @@ getgenv().ConfigsKaitun = {
 			-- Friend Shop
 			"Skyroot Chest",
 			"Pet Shard GiantBean",
-			"Skyroot Chest",
-			"Mega Lollipop",
-			"Gold Lollipop",
-			"Silver Lollipop",
 		},
 		["Traveling Shop"] = {
 			"Bee Egg",
@@ -287,19 +283,7 @@ getgenv().ConfigsKaitun = {
 			},
 			Pets = {
 				"Golden Goose",
-				"French Fry Ferret",
-				"Corrupted Kitsune",
-				"Kitsune",
-				"Spinosaurus",
-				"T-Rex",
-				"Disco Bee",
-				"Butterfly",
-				"Mimic Octopus",
-				"Queen Bee",
-				"Fennec Fox",
-				"Dragonfly",
-				"Raccoon",
-				"Red Fox",
+
 			},
 			Pet_Weight_Noti = true,
 		}
