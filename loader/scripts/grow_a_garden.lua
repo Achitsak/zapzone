@@ -5,43 +5,33 @@ repeat task.wait()
 until game:GetService("Players").LocalPlayer:GetAttribute('DataFullyLoaded') == true
 getgenv().ConfigsKaitun = {
 	Beta_Fix_Data_Sync = true,
-
 	NoDeletePlayer = false,
-
 	["Block Pet Gift"] = false,
-
-	Collect_Cooldown = 60, -- cooldown to collect fruit
-
+	Collect_Cooldown = 120, -- cooldown to collect fruit
 	["Low Cpu"] = true,
 	["Auto Rejoin"] = false,
-
 	["Rejoin When Update"] = false,
 	["Limit Tree"] = {
-		["Limit"] = 150,
-		["Destroy Until"] = 150,
-
+		["Limit"] = 400,
+		["Destroy Until"] = 350,
 		["Safe Tree"] = {
-            "Moon Blossom",
-            "Bone Blossom",
-            "Moon Melon",
-            "Maple Apple",
-            "Moon Mango",
-            "Dragon Pepper",
-            "Elephant Ears",
-            "Fossilight",
-            "Princess Thorn",
-			-- for the event
-            ["Blueberry"] = 8,
-            ["Strawberry"] = 8,
-            ["Apple"] = 8,
-            ["Coconut"] = 8,
-            ["Dragon Fruit"] = 8,
-            ["Mango"] = 8,
-            ["Tomato"] = 20,
-            ["Cactus"] = 8,
+			"Moon Blossom",
+			"Fossilight",
+			["Sugar Apple"] = 2,
+			["Elder Strawberry"] =2,
+			["Ember Lily"] = 2,
+			["Grand Tomato"] = 2,
+			["Beanstalk"] = 2,
+            ["Blueberry"] = 5,
+            ["Strawberry"] = 5,
+            ["Apple"] = 4,
+            ["Coconut"] = 4,
+            ["Dragon Fruit"] = 4,
+            ["Mango"] = 2,
+            ["Tomato"] = 5,
+            ["Cactus"] = 5,
 		}
 	},
-
 	Seed = {
 		Buy = {
 			Mode = "Auto", -- Custom , Auto
@@ -77,13 +67,11 @@ getgenv().ConfigsKaitun = {
 			}
 		}
 	},
-
 	["Seed Pack"] = {
 		Locked = {
 
 		}
 	},
-
 	Events = {
 		["Bean Event"] = {
 			Minimum_Money = 1_000_000, -- minimum money to start play this event
@@ -109,15 +97,27 @@ getgenv().ConfigsKaitun = {
 			"Pet Shard GiantBean",
 			"Sprout Egg",
 		},
-		Start_Do_Honey = 2_000_000 -- start trade fruit for honey at money
+		Start_Do_Honey = 1_000_000 -- start trade fruit for honey at money
 	},
-
 	Gear = {
 		Buy = { 
-			"Watering Can",
-			"Trowel",
-			"Recall Wrench",
-			"Magnifying Glass",
+			"Tanning Mirror",
+			"Cleaning Spray",
+			"Favorite Tool",
+			"Harvest Tool",
+			"Friendship Pot",
+			"Master Sprinkler",
+			"Basic Sprinkler",
+			"Godly Sprinkler",
+			"Advanced Sprinkler",
+			"Level Up Lollipop",
+			"Medium Toy",
+			"Medium Treat",
+			"Grandmaster Sprinkler",
+			"Lightning Rod",
+
+		},
+		Lock = {
 			"Tanning Mirror",
 			"Cleaning Spray",
 			"Favorite Tool",
@@ -133,29 +133,10 @@ getgenv().ConfigsKaitun = {
 			"Grandmaster Sprinkler",
 			"Lightning Rod",
 		},
-		Lock = {
-			"Watering Can",
-			"Trowel",
-			"Recall Wrench",
-			"Magnifying Glass",
-			"Tanning Mirror",
-			"Cleaning Spray",
-			"Favorite Tool",
-			"Harvest Tool",
-			"Friendship Pot",
-			"Master Sprinkler",
-			"Basic Sprinkler",
-			"Godly Sprinkler",
-			"Advanced Sprinkler",
-			"Level Up Lollipop",
-			"Medium Toy",
-			"Medium Treat",
-			"Grandmaster Sprinkler",
-		},
 	},
-
 	Eggs = {
 		Place = {
+			"Sprout Egg",
 			"Gourmet Egg",
 			"Zen Egg",
 			"Primal Egg",
@@ -169,44 +150,45 @@ getgenv().ConfigsKaitun = {
 			"Rare Summer Egg",
 			"Mythical Egg",
 			"Uncommon Egg",
-			"Common Egg",
+			"Legendary Egg",
 		},
 		Buy = {
-			"Bee Egg",
+			"Sprout Egg",
+			"Gourmet Egg",
+			"Zen Egg",
+			"Primal Egg",
+			"Dinosaur Egg",
 			"Oasis Egg",
-			"Paradise Egg",
 			"Anti Bee Egg",
 			"Night Egg",
-			"Rare Summer Egg",
 			"Bug Egg",
+			"Paradise Egg",
+			"Bee Egg",
+			"Rare Summer Egg",
 			"Mythical Egg",
-			"Uncommon Egg",
-			"Common Egg",
+			"Rare Egg",
+			"Legendary Egg",
 		}
 	},
 
 	Pets = {
-		["Auto Feed"] = true,
-
 		["Start Delete Pet At"] = 40,
 		["Upgrade Slot"] = {
 			["Pet"] = {
-				["Starfish"] = { 5, 100, 1, true }, -- the "true" on the last is auto equip (use for like only need to use for upgrade pet)
+				["Starfish"] = { 4, 100, 1, true },
+				["Rooster"] = { 4, 100, 1, true }, -- the "true" on the last is auto equip (use for like only need to use for upgrade pet)
 			},
-			["Limit Upgrade"] = 5, -- max is 5 (more than or lower than 1 will do nothing)
+			["Limit Upgrade"] = 5,
 			["Equip When Done"] = {
-				["Tanchozuru"] = { 5, 100, 1 }, -- 5 on the first mean equip only 5 | pet , 100 mean equip only level pet lower than 100 | the one on the last is priority it will ues first if possible 
-				["Ostrich"] = { 3, 100, 2 },
-				["Blood Kiwi"] = { 8, 100 },
 				["Seal"] = { 8, 100 },
 				["Rooster"] = { 8, 100 },
-				["Starfish"] = { 5, 75 },
 			},
 		},
 		Favorite_LockedPet = false,
 		Locked_Pet_Age = 60, -- pet that age > 60 will lock
 		Locked = {
 			"Griffin",
+			"Junkbot",
 			"Golden Goose",
 			"Golem",
 			"French Fry Ferret",
@@ -234,23 +216,22 @@ getgenv().ConfigsKaitun = {
 			"Mimic Octopus",
 			"Red Fox",
 			"Blood Owl",
-			["Starfish"] = 10,
+			["Starfish"] = 5,
 		},
-		LockPet_Weight = 7, -- if Weight >= 10 they will locked
+		LockPet_Weight = 5, -- if Weight >= 10 they will locked
 		Ignore_Pet_Weight = {
-			"NAME oF PET THAT U DONT NEED LOCK",
+		"NAME oF PET THAT U DONT NEED LOCK",
 		},
 		Instant_Sell = {
-			"NAME oF SOMETHING",
+			"Monkey",
+			"Pig",
+			"Spotted Deer",
 		}
 	},
-
 	Webhook = {
-		UrlPet = "xxx",
-		UrlSeed = "xxx",
-		PcName = "xxx",
-
-		Mention = "", -- discord id
+		UrlPet = "",
+		UrlSeed = "",
+		PcName = "xx",
 
 		Noti = {
 			Seeds = {
@@ -262,10 +243,18 @@ getgenv().ConfigsKaitun = {
 				"Idk"
 			},
 			Pets = {
-				"Golden Goose",
-
+				"Disco Bee",
+				"Butterfly",
+				"Mimic Octopus",
+				"Queen Bee",
+				"Dragonfly",
+				"Raccoon",
+				"Fennec Fox",
+				"Kitsune",
+				"Corrupted Kitsune",
+                "Kitsune",
 			},
-			Pet_Weight_Noti = true,
+			Pet_Weight_Noti = false,
 		}
 	},
 }
