@@ -39,9 +39,9 @@ _G.Races_Settings = {
         ["v3"] = true,
         ["Races_Lock"] = {
             ["Races"] = {
-                ["Mink"] = true,
+                ["Mink"] = false,
                 ["Human"] = true,
-                ["Fishman"] = true
+                ["Fishman"] = false
             },
             ["RerollsWhenFragments"] = 20000
         }
@@ -94,7 +94,7 @@ _G.FarmMastery_Settings = {
     }
 }
 _G.Hop_Settings = {
-    ["Find Tushita"] = true
+    ["Find Tushita"] = false
 }
 
 getgenv().Key = "MARU-VO2N5-9LRH-6RFL-D0DCZ-8H4RP"
