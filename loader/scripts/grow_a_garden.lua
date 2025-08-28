@@ -87,6 +87,7 @@ getgenv().ConfigsKaitun = {
 			["Spriggan"] = 8,
 			-- Friend Shop
 			"Skyroot Chest",
+			"Gnome",
 			"Pet Shard GiantBean",
 		},
 		["Traveling Shop"] = {
