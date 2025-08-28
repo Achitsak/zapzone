@@ -5,33 +5,55 @@ repeat task.wait()
 until game:GetService("Players").LocalPlayer:GetAttribute('DataFullyLoaded') == true
 getgenv().ConfigsKaitun = {
 	Beta_Fix_Data_Sync = true,
+
 	NoDeletePlayer = false,
+
 	["Block Pet Gift"] = false,
+
 	Collect_Cooldown = 120, -- cooldown to collect fruit
+
 	["Low Cpu"] = true,
-	["Auto Rejoin"] = false,
+	["Auto Rejoin"] = true,
+
 	["Rejoin When Update"] = false,
-	["Limit Tree"] = {
-		["Limit"] = 400,
-		["Destroy Until"] = 350,
-		["Safe Tree"] = {
-			"Moon Blossom",
-			"Fossilight",
-			["Sugar Apple"] = 2,
-			["Elder Strawberry"] =2,
-			["Ember Lily"] = 2,
-			["Grand Tomato"] = 2,
-			["Beanstalk"] = 2,
-            ["Blueberry"] = 5,
-            ["Strawberry"] = 5,
-            ["Apple"] = 4,
-            ["Coconut"] = 4,
-            ["Dragon Fruit"] = 4,
-            ["Mango"] = 2,
-            ["Tomato"] = 5,
-            ["Cactus"] = 5,
+
+	["Auto Trade Pet"] = { -- not done yet bro dont use
+		["Enabled"] = false, 
+		["Target"] =  { -- multi users
+			"username1",
+			"username2",
+		},
+		["Pet To Send"] = {
+			
 		}
 	},
+
+	["Limit Tree"] = {
+		["Limit"] = 200,
+		["Destroy Until"] = 150,
+
+		["Safe Tree"] = {
+            "Moon Blossom",
+            "Bone Blossom",
+            "Moon Melon",
+            "Maple Apple",
+            "Moon Mango",
+            "Dragon Pepper",
+            "Elephant Ears",
+            "Fossilight",
+            "Princess Thorn",
+			-- for the event
+            ["Blueberry"] = 15,
+            ["Strawberry"] = 15,
+            ["Apple"] = 15,
+            ["Coconut"] = 15,
+            ["Dragon Fruit"] = 15,
+            ["Mango"] = 15,
+            ["Tomato"] = 20,
+            ["Cactus"] = 15,
+		}
+	},
+
 	Seed = {
 		Buy = {
 			Mode = "Auto", -- Custom , Auto
@@ -72,11 +94,12 @@ getgenv().ConfigsKaitun = {
 
 		}
 	},
+
 	Events = {
 		["Bean Event"] = {
-			Minimum_Money = 1_000_000, -- minimum money to start play this event
+			Minimum_Money = 10_000_000, -- minimum money to start play this event
 		},
-		MaxMoney_Restocks = 1_000_000,
+		MaxMoney_Restocks = 10_000_000,
 		Shop = { -- un comment to buy
 			"Sprout Seed Pack",
 			"Sprout Egg",
@@ -86,8 +109,8 @@ getgenv().ConfigsKaitun = {
 			-- "Amberheart",
 			["Spriggan"] = 8,
 			-- Friend Shop
-			"Skyroot Chest",
 			"Gnome",
+			"Skyroot Chest",
 			"Pet Shard GiantBean",
 		},
 		["Traveling Shop"] = {
@@ -98,8 +121,9 @@ getgenv().ConfigsKaitun = {
 			"Pet Shard GiantBean",
 			"Sprout Egg",
 		},
-		Start_Do_Honey = 1_000_000 -- start trade fruit for honey at money
+		Start_Do_Honey = 2_000_000 -- start trade fruit for honey at money
 	},
+
 	Gear = {
 		Buy = { 
 			"Tanning Mirror",
@@ -224,9 +248,7 @@ getgenv().ConfigsKaitun = {
 		"NAME oF PET THAT U DONT NEED LOCK",
 		},
 		Instant_Sell = {
-			"Monkey",
-			"Pig",
-			"Spotted Deer",
+			
 		}
 	},
 	Webhook = {
