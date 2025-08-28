@@ -48,7 +48,7 @@ _G.Races_Settings = {
     }
 }
 _G.Fruits_Settings = {
-    ['Main_Fruits'] = {'Dough-Dough'},
+    ['Main_Fruits'] = {"Light-Light", "Dark-Dark", "Magma-Magma", "Buddha-Buddha"},
     ['Select_Fruits'] = {"Light-Light", "Dark-Dark", "Magma-Magma", "Buddha-Buddha"}
 }
 _G.Settings_Melee = {
