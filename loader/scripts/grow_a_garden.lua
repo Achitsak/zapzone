@@ -93,9 +93,12 @@ getgenv().ConfigsKaitun = {
 	Events = {
 		["Fairy Event"] = {
 			Minimum_Money = 1_000_000, -- minimum money to start play this event
-			Rewards_Item = {
-				"FairyPoints",
+			Rewards_Item = { -- top mean select first
+				"Pet Shard Glimmering",
 				"Enchanted Egg",
+				"Mutation Spray Glimmering",
+				"FairyPoints",
+				"Fairy Targeter",
 				"Enchanted Seed Pack",
 			},
 			Upgrade = {
@@ -116,7 +119,16 @@ getgenv().ConfigsKaitun = {
 		},
 		MaxMoney_Restocks = 1_000_000,
 		Shop = { -- un comment to buy
+			"Sprout Seed Pack",
 			"Sprout Egg",
+			-- "Mandrake",
+			"Silver Fertilizer",
+			-- "Canary Melon",
+			-- "Amberheart",
+			["Spriggan"] = 8,
+			-- Friend Shop
+			"Skyroot Chest",
+			"Pet Shard GiantBean",
 		},
 		["Traveling Shop"] = {
 			"Bee Egg",
