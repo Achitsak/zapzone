@@ -169,7 +169,6 @@ getgenv().ConfigsKaitun = {
 			"Enchanted Egg",
 			"Bug Egg",
 			"Paradise Egg",
-			"Sprout Egg",
 			"Gourmet Egg",
 			"Zen Egg",
 			"Primal Egg",
