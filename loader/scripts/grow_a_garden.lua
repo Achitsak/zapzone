@@ -212,6 +212,12 @@ getgenv().ConfigsKaitun = {
 	},
 
 	Pets = {
+		["Auto Feed"] = true,
+
+		MutationPet = {
+			["PET NAME"] = { "Glimmering","... any other" }
+		},
+		
 		["Start Delete Pet At"] = 40,
 		["Upgrade Slot"] = {
 			["Pet"] = {
