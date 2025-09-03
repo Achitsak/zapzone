@@ -234,12 +234,14 @@ getgenv().ConfigsKaitun = {
 				["Spriggan"] = { 4, 100, 1, true },
 				["Dog"] = { 4, 100, 1, true },
 				["Ladybug"] = { 4, 100, 1, true },
+				["Imp"] = { 4, 100, 1, true },
 				["Rooster"] = { 4, 100, 1, true }, -- the "true" on the last is auto equip (use for like only need to use for upgrade pet)
 			},
 			["Limit Upgrade"] = 5,
 			["Equip When Done"] = {
-				["Seal"] = { 8, 100 },
-				["Rooster"] = { 8, 100 },
+				["Glimmering Sprite"] = { 8, 100 },
+				["Imp"] = { 8, 100 },
+				["Ladybuge"] = { 8, 100 },
 			},
 		},
 		Favorite_LockedPet = false,
