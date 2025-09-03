@@ -174,7 +174,7 @@ getgenv().Key = "b25c888204c8c6571a5f70ac"
             ["Skull Guitar"] = false,
             ["Mirror Fractal"] = false,
             ["Cursed Dual Katana"] = true,
-            ["Upgrade Race V2-V3"] = false,
+            ["Upgrade Race V2-V3"] = true,
             ["Auto Pull Lever"] = false,
             ["Shark Anchor"] = false, --- if have cdk,sg,godhuman
         },
@@ -223,7 +223,23 @@ getgenv().Key = "b25c888204c8c6571a5f70ac"
             ["WebhookUrl"] = "",
         }
     }
-print('this is loadstring for bloxfruits')
+loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BananaCat-kaitunBF.lua"))()
+                --- จบ ---
+                break
+            end
+            if _G.MaruHubIsloaded then
+                if game:GetService("Players").LocalPlayer.Data.StatRefunds.Value > 0 and _G.RefundStat then
+                    print("Refund")
+                    if game:GetService("Players").LocalPlayer.Data.Stats["Demon Fruit"].Level.Value <= 1 then
+                        local args = {
+                            "redeemRefundPoints",
+                            "Refund Points"
+                        }
+                        game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF_"):InvokeServer(unpack(args))                        
+                    end
+                end
+
+                -- ใส่สคริปต์พร้อม Config Maru ที่นี่
 _G.Team = "Pirate" -- Marine / Pirate
 getgenv().Script_Mode = "Kaitun_Script"
 _G.MainSettings = {
@@ -326,23 +342,6 @@ getgenv().Key = "MARU-VO2N5-9LRH-6RFL-D0DCZ-8H4RP"
 getgenv().id = "759079095438278687"
 getgenv().Script_Mode = "Kaitun_Script"
 loadstring(game:HttpGet("https://raw.githubusercontent.com/xshiba/MasterPClient/main/Private.lua"))()
-                --- จบ ---
-                break
-            end
-            if _G.MaruHubIsloaded then
-                if game:GetService("Players").LocalPlayer.Data.StatRefunds.Value > 0 and _G.RefundStat then
-                    print("Refund")
-                    if game:GetService("Players").LocalPlayer.Data.Stats["Demon Fruit"].Level.Value <= 1 then
-                        local args = {
-                            "redeemRefundPoints",
-                            "Refund Points"
-                        }
-                        game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF_"):InvokeServer(unpack(args))                        
-                    end
-                end
-
-                -- ใส่สคริปต์พร้อม Config Maru ที่นี่
-                loadstring(game:HttpGet("https://raw.githubusercontent.com/Achitsak/zapzone/refs/heads/main/loader/scripts/bloxfruits.lua"))()
                 --- จบ ---
                 break
             end
