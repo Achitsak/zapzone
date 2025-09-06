@@ -96,7 +96,6 @@ getgenv().ConfigsKaitun = {
 			Rewards_Item = { -- top mean select first
 				"Pet Shard Glimmering",
 				"Enchanted Egg",
-				"Mutation Spray Glimmering",
 				"FairyPoints",
 				"Fairy Targeter",
 				"Enchanted Seed Pack",
@@ -110,36 +109,42 @@ getgenv().ConfigsKaitun = {
 					"Fairy Event Duration",
 				},
 				Limit = {
-					["Glimmer Multiplier"] = 5, -- max 10
-					["Loose Fairy Spawn Amount"] = 4, -- max 4
-					["Fairy Event Duration"] = 5, -- max 10
+					["Glimmer Multiplier"] = 10, -- max 10
+					["Loose Fairy Spawn Amount"] = 10, -- max 10
+					["Fairy Event Duration"] = 10, -- max 10
 					["Fairy Spawn Amount"] = 9, -- max 9
 				}
 			}
 		},
-		MaxMoney_Restocks = 1_000_000,
+		MaxMoney_Restocks = 50_000_000,
 		Shop = { -- un comment to buy
+			"Enchanted Chest",
+			"Pet Shard Glimmering",
+			"Enchanted Egg",
+
 			"Sprout Seed Pack",
 			"Sprout Egg",
-			-- "Mandrake",
-			"Silver Fertilizer",
-			-- "Canary Melon",
-			-- "Amberheart",
 			["Spriggan"] = 8,
-			-- Friend Shop
 			"Skyroot Chest",
-			"Pet Shard GiantBean",
 		},
 		["Traveling Shop"] = {
 			"Bee Egg",
+			"Paradise Egg", 
+			"Rare Summer Egg", 
+			"Common Summer Egg"
 		},
 		Craft = {
+			"Enchanted Chest",
+			"Fairy Net",
+			"Enchanted Egg",
+			"Enchanted Seed Pack",
 			"Anti Bee Egg",
 			"Pet Shard GiantBean",
 			"Sprout Egg",
 		},
 		Start_Do_Honey = 2_000_000 -- start trade fruit for honey at money
 	},
+
 
 	Gear = {
 		Buy = { 
