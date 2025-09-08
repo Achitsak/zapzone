@@ -40,7 +40,7 @@ elseif gameId == 994732206 then -- blox fruits
         ['Accessories'] = {'Dark Coat', 'Leviathan Shield', 'Leviathan Crown', 'Pale Scarf', 'Kitsune Mask', 'Kitsune Ribbon', 'Green Lightning', 'Yellow Lightning', 'Purple Lightning'},
         ['Fruit'] = {
             'Kitsune', 'Leopard', 'Dragon (West)', 'Spirit', 'Control', 'Venom', 'Gas', 'Yeti',
-            'Shadow', 'Dough', 'Mammoth', 'T-Rex', 'Dragon (East)'
+            'Shadow', 'Dough', 'Mammoth', 'T-Rex', 'Lightning-Lightning', 'Gravity-Gravity', 'Pain-Pain'
         }
 
     }
