@@ -19,8 +19,8 @@ getgenv().Script_Mode = "Kaitun_Script"
 _G.MainSettings = {
     ["EnabledHOP"] = true,
     ['FPSBOOST'] = true,
-    ["FPSLOCKAMOUNT"] = 60,
-    ['WhiteScreen'] = true,
+    ["FPSLOCKAMOUNT"] = 12,
+    ['WhiteScreen'] = false,
     ['CloseUI'] = false,
     ["NotifycationExPRemove"] = true,
     ['AFKCheck'] = 150,
@@ -109,7 +109,7 @@ _G.FarmMastery_Settings = {
     }
 }
 _G.Hop_Settings = {
-    ["Find Tushita"] = false
+    ["Find Tushita"] = true
 }
 
 getgenv().Key = "MARU-VO2N5-9LRH-6RFL-D0DCZ-8H4RP"
