@@ -145,7 +145,6 @@ task.spawn(function()
             if _G.BananaIsloaded then
 
                 -- ใส่สคริปต์พร้อม Config Banana ที่นี่
-                loadstring(game:HttpGet(""))()
 repeat wait() until game:IsLoaded() and game.Players.LocalPlayer
 getgenv().Key = "b25c888204c8c6571a5f70ac"
     getgenv().SettingFarm ={
