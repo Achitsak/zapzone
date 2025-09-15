@@ -5,46 +5,80 @@ repeat task.wait()
 until game:GetService("Players").LocalPlayer:GetAttribute('DataFullyLoaded') == true
 getgenv().ConfigsKaitun = {
 	Beta_Fix_Data_Sync = true,
+
 	NoDeletePlayer = false,
+
 	["Block Pet Gift"] = false,
-	Collect_Cooldown = 120, -- cooldown to collect fruit
+
+	Collect_Cooldown = 60, -- cooldown to collect fruit
+
 	["Low Cpu"] = true,
 	["Auto Rejoin"] = true,
+
 	["Rejoin When Update"] = true,
+
+	["Auto Trade Pet"] = { -- not done yet bro dont use
+		["Enabled"] = false, 
+		["Target"] =  { -- multi users
+			"username1",
+			"username2",
+		},
+		["Pet To Send"] = {
+			
+		}
+	},
+
+	Ascend = {
+		Enabled = true,
+		Max_Rebirth_Money = 1_000_000_000_000,
+		Shop = {
+			"Egg Capacity"
+		}
+	},
+
 	["Limit Tree"] = {
-		["Limit"] = 150,
-		["Destroy Until"] = 120,
+		["Limit"] = 400,
+		["Destroy Until"] = 400,
+
 		["Safe Tree"] = {
 			"Moon Blossom",
+			"Bone Blossom",
+			"Moon Melon",
+			"Maple Apple",
+			"Moon Mango",
+			"Dragon Pepper",
+			"Elephant Ears",
 			"Fossilight",
-			Bamboo = 2,
-			Coconut = 2,
-			Mushroom = 2,
-			Glowthorn = 2,
-			Tomato = 2,
-			Pumpkin = 2,
-			Pepper = 2,
-			Cacao = 2,
-			Apple = 2,
-			Romanesco = 2,
-			["Elder Strawberry"] = 2,
-			["Burning Bud"] = 2,
-			["Giant Pinecone"] = 2,
-			Corn = 2,
-			["Sugar Apple"] = 2,
-			["Ember Lily"] = 2,
-			["Dragon Fruit"] = 2,
-			Sunbulb = 2,
-			["Orange Tulip"] = 2,
-			Blueberry = 2,
-			Watermelon = 2,
-			Mango = 2,
-			Cactus = 2,
-			Strawberry = 2,
-			Beanstalk = 2,
-			Lightshoot = 2,
-			Grape = 2,
-			Daffodil = 2,
+			"Princess Thorn",
+			-- for the event
+			Bamboo = 4,
+			Coconut = 15,
+			Mushroom = 4,
+			Glowthorn = 4,
+			Tomato = 15,
+			Pumpkin = 4,
+			Pepper = 4,
+			Cacao = 15,
+			Apple = 15,
+			Romanesco = 4,
+			["Elder Strawberry"] = 4,
+			["Burning Bud"] = 4,
+			["Giant Pinecone"] = 4,
+			Corn = 4,
+			["Sugar Apple"] = 4,
+			["Ember Lily"] = 4,
+			["Dragon Fruit"] = 15,
+			Sunbulb = 8,
+			["Orange Tulip"] = 4,
+			Blueberry = 15,
+			Watermelon = 4,
+			Mango = 15,
+			Cactus = 4,
+			Strawberry = 15,
+			Beanstalk = 4,
+			Lightshoot = 4,
+			Grape = 4,
+			Daffodil = 4,
 		}
 	},
 
@@ -91,41 +125,35 @@ getgenv().ConfigsKaitun = {
 	},
 
 	Events = {
-		["Fairy Event"] = {
-			Minimum_Money = 1_000_000, -- minimum money to start play this event
-			Rewards_Item = { -- top mean select first
-				"Pet Shard Glimmering",
-				"Enchanted Egg",
-				"FairyPoints",
-				"Fairy Targeter",
-				"Enchanted Seed Pack",
-			},
-			Upgrade = {
-				Mode = "Order", -- Order (mean will up on order), Chepest, Highest
-				Order = { -- top upgrade first, not put mean not upgrade
-					"Fairy Spawn Amount",
-					"Loose Fairy Spawn Amount",
-					"Glimmer Multiplier",
-					"Fairy Event Duration",
-				},
-				Limit = {
-					["Glimmer Multiplier"] = 10, -- max 10
-					["Loose Fairy Spawn Amount"] = 10, -- max 10
-					["Fairy Event Duration"] = 10, -- max 10
-					["Fairy Spawn Amount"] = 9, -- max 9
-				}
-			}
+		["Fall Event"] = {
+			Minimum_Money = 10_000_000, -- minimum money to start play this event
 		},
-		MaxMoney_Restocks = 50_000_000,
+		MaxMoney_Restocks = 10_000_000,
+		
 		Shop = { -- un comment to buy
+			"Fall Egg",
+
 			"Enchanted Chest",
 			"Pet Shard Glimmering",
 			"Enchanted Egg",
+			"Enchanted Seed Pack",
+			-- "Drake",
+			"Pixie Faern",
+			"Untold Bell",
+			"Luminous Sprite",
+			"Mutation Spray Luminous",
+			"Luminous Wand",
 
 			"Sprout Seed Pack",
 			"Sprout Egg",
+			-- "Mandrake",
+			"Silver Fertilizer",
+			-- "Canary Melon",
+			-- "Amberheart",
 			["Spriggan"] = 8,
+			-- Friend Shop
 			"Skyroot Chest",
+			"Pet Shard GiantBean",
 		},
 		["Traveling Shop"] = {
 			"Bee Egg",
@@ -183,9 +211,8 @@ getgenv().ConfigsKaitun = {
 	},
 	Eggs = {
 		Place = {
+			"Fall Egg",
 			"Enchanted Egg",
-			"Bug Egg",
-			"Paradise Egg",
 			"Sprout Egg",
 			"Gourmet Egg",
 			"Zen Egg",
@@ -194,9 +221,11 @@ getgenv().ConfigsKaitun = {
 			"Oasis Egg",
 			"Anti Bee Egg",
 			"Night Egg",
+			"Bug Egg",
+			"Paradise Egg",
 			"Bee Egg",
+			"Rare Summer Egg",
 			"Mythical Egg",
-			"Uncommon Egg",
 			"Common Egg",
 		},
 		Buy = {
@@ -242,21 +271,24 @@ getgenv().ConfigsKaitun = {
 				["Imp"] = { 4, 100, 1, true },
 				["Rooster"] = { 4, 100, 1, true }, -- the "true" on the last is auto equip (use for like only need to use for upgrade pet)
 			},
-			["Limit Upgrade"] = 5,
+			["Limit Upgrade"] = 5, -- max is 5 (more than or lower than 1 will do nothing)
 			["Equip When Done"] = {
-				["Glimmering Sprite"] = { 8, 100 },
-				["Imp"] = { 8, 100 },
-				["Ladybuge"] = { 8, 100 },
+				["Glimmering Sprite"] = {8, 100, 1},
+				["Tanchozuru"] = { 5, 100, 2 }, -- 5 on the first mean equip only 5 | pet , 100 mean equip only level pet lower than 100 | the one on the last is priority it will ues first if possible 
+				["Ostrich"] = { 3, 100, 2 },
+				["Blood Kiwi"] = { 8, 100 },
+				["Seal"] = { 8, 100 },
+				["Rooster"] = { 8, 100 },
+				["Starfish"] = { 5, 75 },
 			},
 		},
 		Favorite_LockedPet = false,
 		Locked_Pet_Age = 60, -- pet that age > 60 will lock
 		Locked = {
+			"Swan",
+			"Phoenix",
 			"Cockatrice",
-			"Glimmering Sprite",
-			"Imp",
 			"Griffin",
-			"Junkbot",
 			"Golden Goose",
 			"Golem",
 			"French Fry Ferret",
@@ -284,7 +316,7 @@ getgenv().ConfigsKaitun = {
 			"Mimic Octopus",
 			"Red Fox",
 			"Blood Owl",
-			["Starfish"] = 5,
+			["Starfish"] = 10,
 		},
 		LockPet_Weight = 5, -- if Weight >= 10 they will locked
 		Ignore_Pet_Weight = {
