@@ -132,6 +132,7 @@ getgenv().ConfigsKaitun = {
 		
 		Shop = { -- un comment to buy
 			"Fall Egg",
+			"Red Panda",
 
 			"Enchanted Chest",
 			"Pet Shard Glimmering",
@@ -172,7 +173,6 @@ getgenv().ConfigsKaitun = {
 		},
 		Start_Do_Honey = 2_000_000 -- start trade fruit for honey at money
 	},
-
 
 	Gear = {
 		Buy = { 
@@ -229,22 +229,14 @@ getgenv().ConfigsKaitun = {
 			"Common Egg",
 		},
 		Buy = {
-			"Enchanted Egg",
-			"Sprout Egg",
-			"Gourmet Egg",
-			"Zen Egg",
-			"Primal Egg",
-			"Dinosaur Egg",
+			"Bee Egg",
 			"Oasis Egg",
+			"Paradise Egg",
 			"Anti Bee Egg",
 			"Night Egg",
-			"Bug Egg",
-			"Paradise Egg",
-			"Bee Egg",
 			"Rare Summer Egg",
+			"Bug Egg",
 			"Mythical Egg",
-			"Rare Egg",
-			"Legendary Egg",
 			"Uncommon Egg",
 			"Common Egg",
 		}
